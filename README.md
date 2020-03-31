@@ -1,1 +1,2 @@
-# grupo-02-cco
+# luminous
+novo projeto pra sprint 2
