@@ -1,0 +1,2 @@
+cor padrão
+#1e4356 - esse azul escuro do site
