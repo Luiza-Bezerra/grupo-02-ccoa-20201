@@ -24,7 +24,7 @@ body{
 
 }
 .header .title-header h1{
-    text-transform: uppercase;
+   
     color: gold;
     float: left;
  
@@ -71,7 +71,7 @@ body{
     float: left;
     max-width: 50px;
     max-height:50px ;
-    margin-top: 10px;
+    margin-top: 5px;
     color:	#FFD700;
 }
 .meio{
