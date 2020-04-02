@@ -4,6 +4,11 @@
     opacity: 10%;
 }
 
+#backP{
+    background-image: url('lampada.png');
+    background-size: 100%; 
+    opacity: 10%;
+}
 h1{
     color: rgb(242, 243, 239);
     text-align: center;
