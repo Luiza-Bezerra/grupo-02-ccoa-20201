@@ -24,7 +24,7 @@ body{
 
 }
 .header .title-header h1{
-   
+    text-transform: uppercase;
     color: gold;
     float: left;
  
@@ -65,13 +65,13 @@ body{
 }
 .nav-end{
     float: right;
-    margin-top:15px;
+    margin-top:-45px;
 }
 .logo{
     float: left;
     max-width: 50px;
     max-height:50px ;
-    margin-top: 5px;
+    margin-top: 10px;
     color:	#FFD700;
 }
 .meio{
