@@ -1,0 +1,39 @@
+#back{
+    background-image: url('Mundo.jpg');
+    background-size: 100%; 
+    opacity: 10%;
+}
+
+h1{
+    color: rgb(242, 243, 239);
+    text-align: center;
+        /* Alinha o texto ao centro*/
+    text-shadow:5px 5px 3px #111111;
+        /* Coloca sombra no texto*/
+    }
+        
+h3{
+    color: gold;
+    text-align: center;
+            /* Alinha o texto ao centro*/
+    text-shadow:5px 5px 3px #111111;
+            /* Coloca sombra no texto*/
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h4{
+    color: rgb(225, 255, 89);
+    text-align: center;
+            /* Alinha o texto ao centro*/
+    text-shadow:2px 3px 8px #111111;
+            /* Coloca sombra no texto*/
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#efeito{
+    /* Coloca um fundinho atrás do que está escrito*/
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Arruma a margem interna em suas margens cima/baixo */
+    padding: 10px 0px 10px 0px;
+    width: 300px;
+}
