@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simulador Financeiro </title>
+</head>
+<body>
+    <center>
+        <h1> Calculo de gastos com iluminação </h1>
+        <div id="led" style="border: 1px solid black; width: 33%; padding-bottom: 1%;">
+
+            <h3> Simulador </h3>
+
+            Escolha um tipo de Lâmpada
+            <br>
+            <select id="lampada">
+                <option value="8"> Lâmpada LED(8 watts) </option>
+                <option value="11"> Lâmpada Fluorescente(11 watts) </option>
+                <option value="15"> Lâmpada Fluorescente(15 watts) </option>
+                <option value="23"> Lâmpada Fluorescente(23 watts) </option>
+                <option value="40"> Lâmpada Incandescente(40 watts) </option>
+                <option value="60"> Lâmpada Incandescente(60 watts) </option>
+                <option value="100"> Lâmpada Incandescente(100 watts) </option>
+            </select>
+
+            <br>
+            <br>
+            Quantidade de Lâmpadas
+            <br>
+            <input type="number" id="qtd_lamp">
+            <br>
+            <br>
+            Consumo médio diário em horas
+            <br>
+            <input type="number" id="horas">
+            <br>
+            <br>
+            Quantidade de dias ao mês
+            <br>
+            <input type="number" id="dias">
+            <br>
+            <br>
+            <button onclick="gastos_lamp()"> Calcular </button>
+
+            <div id="result" style="display: none;">
+                <br><br>
+                <b> Consumo: <b id="b_consumo" style="color: blue;"> </b> </b>
+                <br>
+                <b> Custo por mês: <b id="despesa_mes" style="color: red;"></b> </b>
+                <br>
+                <b> Custo por ano: <b id="despesa_ano" style="color: purple;"></b> </b>
+
+                <br>
+                <br>
+
+                <b>Tarifa utilizada:</b> <b style="color: gold;"> Enel </b>  
+                <br>
+                <br>
+
+                Novo consumo médio diário em horas <br><input id="novas_horas">
+                <br>
+                <br>
+                <button onclick="calcularEconomia()">Calcular Economia</button>
+                <br>
+                <br>
+                <div id="resultado_economia" style="display: none;">
+                    <b> Consumo: <b id="b_consumo2" style="color: blue;"> </b> </b>
+                    <br>
+                    <b> Custo por mês: <b id="despesa_mes2" style="color: red;"> </b> </b>
+                    <br>
+                    <b> Custo por ano: <b id="despesa_ano2" style="color: purple;"></b> </b>
+                    <br>
+                    <b> Valor economizado no ano: <b id="valor_economizado" style="color: green;"></b> </b>
+                </div>
+            </div>
+
+    </center>
+
+</body>
+</html>
+
+<script>
+    function gastos_lamp(){
+        consumo = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(horas.value) 
+        * Number(dias.value);
+        gasto_mes = consumo * 0.25971;
+        gasto_ano = gasto_mes * 12;
+
+        //lamp.innerHTML = `${lampada.value}`;
+        b_consumo.innerHTML = `${consumo.toFixed(2)}(kWh/mês)`; 
+        despesa_mes.innerHTML = `R$ ${gasto_mes.toFixed(2)}`;
+        despesa_ano.innerHTML = `R$ ${gasto_ano.toFixed(2)}`;
+
+        result.style.display = 'block';
+    }
+
+    function calcularEconomia(){
+        consumo = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(horas.value) 
+        * Number(dias.value);
+        gasto_mes = consumo * 0.25971;
+        gasto_ano = gasto_mes * 12;
+
+        consumo2 = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(novas_horas.value) 
+        * Number(dias.value);
+        gasto_mes2 = consumo2 * 0.25971;
+        gasto_ano2 = gasto_mes2 * 12;
+
+        b_consumo2.innerHTML = `${consumo2.toFixed(2)}(kWh/mês)`;
+        despesa_mes2.innerHTML = `R$ ${gasto_mes2.toFixed(2)}`;
+        despesa_ano2.innerHTML = `R$ ${gasto_ano2.toFixed(2)}`;
+
+        var diferenca = gasto_ano - gasto_ano2;
+        valor_economizado.innerHTML = `R$ ${diferenca.toFixed(2)} (${((diferenca * 100) / gasto_ano).toFixed(1)}%)`;
+
+        resultado_economia.style.display = 'block';
+    }
+</script>
