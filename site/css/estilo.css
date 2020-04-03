@@ -14,9 +14,7 @@ body{
 }
 .header{
     background-color: 	#111111;
- 
     margin: auto;
-
     min-height: 70px;
     max-height: 75px;
     border-bottom: #FFD700 3px solid;
@@ -24,12 +22,13 @@ body{
 
 }
 .header .title-header h1{
-    text-transform: uppercase;
-    color: gold;
+   
+    color: white;
     float: left;
  
 
 }
+
 .header a{
     text-decoration: none;
     color: 	white;
@@ -50,6 +49,7 @@ body{
     padding-right: 25px;
     font-weight: bold;
 }
+
 .header li:hover{
    
     color: #FFD700;
@@ -65,27 +65,20 @@ body{
 }
 .nav-end{
     float: right;
-    margin-top:-45px;
+    margin-top:15px;
 }
 .logo{
     float: left;
     max-width: 50px;
     max-height:50px ;
-    margin-top: 10px;
+    margin-top: 5px;
     color:	#FFD700;
 }
-.meio{
-    width: 100%;
-    margin: 0;
-    height: 500px;
-    overflow: hidden;
-   
-}
+
 
 #lumi{
-    color: white;
+    color: #FFD700;
 }
-
 .footer {
     height: auto;
     
@@ -129,6 +122,7 @@ body{
     float: left;
     margin-left: 20px;
 }
+
 
 
 
