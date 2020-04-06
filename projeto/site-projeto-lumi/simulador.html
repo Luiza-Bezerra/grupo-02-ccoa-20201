@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+   
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="icon" href="lamp.png">
+    <title> Simulador Financeiro </title>
+</head>
+<body>
+        <div class="header">
+                <div class="container">
+                    <div class="title-header">
+                        <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="index.html" >Início</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="simulador.html" class="current">Simulador</a></li>
+                            <li><a href="pacotes.html" >Pacotes</a></li>
+                            
+                           
+                          
+
+                        </ul>
+                    </div>
+                    <div class="nav-end">
+                        <ul>
+                            <li class="l2"><a href="cadastro.html">Cadastrar</a></li>
+                            <li class="l2"><a href="login.html">Entrar</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+   
+       
+        
+    <div class="box">
+        <h1> Calculo de gastos com iluminação </h1>
+            <h3> Simulador </h3>
+            <select id="lampada" class="con">
+                <option value="">  Escolha um tipo de Lâmpada </option>
+                <option value="8"> Lâmpada LED tubular(8 watts) </option>
+                <option value="11"> Lâmpada LED tubular(11 watts) </option>
+                <option value="15"> Lâmpada LED tubular(15 watts) </option>
+                <option value="23"> Lâmpada LED tubular(23 watts) </option>
+                <option value="40"> Lâmpada LED tubular(40 watts) </option>
+                <option value="8"> Lâmpada LED (8 watts) </option>
+                <option value="11"> Lâmpada LED(11 watts) </option>
+                <option value="15"> Lâmpada LED(15 watts) </option>
+                <option value="23"> Lâmpada LED(23 watts) </option>
+                <option value="40"> Lâmpada LED(40 watts) </option>
+            </select>
+            <input type="number" id="qtd_lamp" class="con" placeholder="Quantidade de Lâmpadas">
+            <input type="number" id="horas"  class="con" placeholder="Consumo médio diário em horas"> 
+            <input type="number" id="dias"  class="con" placeholder=" Quantidade de dias ao mês">
+           
+     
+            <button onclick="gastos_lamp()" class="btn"> Calcular </button>
+            <br>
+        
+            <div id="result" style="display: none;">
+                <br><br>
+                <b> Consumo: <b id="b_consumo" style="color: rgb(255, 230, 87);"> </b> </b>
+                <br>
+                <b> Custo por mês: <b id="despesa_mes" style="color: rgb(255, 212, 212);"></b> </b>
+                <br>
+                <b> Custo por ano: <b id="despesa_ano" style="color: rgb(255, 77, 255);"></b> </b>
+
+                <br>
+                <br>
+
+                <b>Tarifa utilizada:</b> <b style="color: gold;"> Enel </b>  
+                <br>
+                <br>
+
+                <input id="novas_horas" class="con" placeholder="Novo consumo médio diário em horas">
+                <button onclick="calcularEconomia()" class="btn">Calcular Economia</button>
+                <div id="resultado_economia" style="display: none;">
+                    <b> Consumo: <b id="b_consumo2" style="color: rgb(30, 30, 58);"> </b> </b>
+                    <br>
+                    <b> Custo por mês: <b id="despesa_mes2" style="color: rgb(233, 220, 220);"> </b> </b>
+                    <br>
+                    <b> Custo por ano: <b id="despesa_ano2" style="color: rgb(255, 112, 255);"></b> </b>
+                    <br>
+                    <b> Valor economizado no ano: <b id="valor_economizado" style="color: rgb(130, 223, 130);"></b> </b>
+                </div>
+            </div>
+    </div>
+  
+
+<div class="footer">
+            <div class="container-footer-left">
+                <p><h2>Sobre a Luminous</h2></p>
+                <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica, percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz, então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.</p>
+            </div>
+            <div class="container-footer-right">
+                <div class="icons">
+                    <ul>
+                       <li>  <img src="img/instagram.png"  class="logo" alt=""> </li> <img src="" alt="">
+                       <li><img src="img/facebook.png"  class="logo" alt=""></li>
+                       <li><img src="img/twitter.png" class="logo" alt=""></li>
+                       <li><img src="img/linkedin.png" class="logo"  alt=""></li>
+                    </ul>
+                </div>
+                    </div>
+        </div>
+        
+        
+        <div class="footer_copyright">
+            © copyright <b>Luminous</b>. All Rights Reserved. <br>
+            Design by <b>Equipe de Ti da Luminous.</b>
+</div>
+</body>
+</html>
+
+<script>
+    function gastos_lamp(){
+        if(lampada.value ==""){
+            alert('Escolha um tipo de lampada,Por favor')
+            resultado_economia.style.display = 'none';
+        }else{
+        consumo = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(horas.value) 
+        * Number(dias.value);
+        gasto_mes = consumo * 0.25971;
+        gasto_ano = gasto_mes * 12;
+
+        //lamp.innerHTML = `${lampada.value}`;
+        b_consumo.innerHTML = `${consumo.toFixed(2)}(kWh/mês)`; 
+        despesa_mes.innerHTML = `R$ ${gasto_mes.toFixed(2)}`;
+        despesa_ano.innerHTML = `R$ ${gasto_ano.toFixed(2)}`;
+
+        result.style.display = 'block';
+        }
+    }
+
+    function calcularEconomia(){
+     
+        consumo = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(horas.value) 
+        * Number(dias.value);
+        gasto_mes = consumo * 0.25971;
+        gasto_ano = gasto_mes * 12;
+
+        consumo2 = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(novas_horas.value) 
+        * Number(dias.value);
+        gasto_mes2 = consumo2 * 0.25971;
+        gasto_ano2 = gasto_mes2 * 12;
+
+        b_consumo2.innerHTML = `${consumo2.toFixed(2)}(kWh/mês)`;
+        despesa_mes2.innerHTML = `R$ ${gasto_mes2.toFixed(2)}`;
+        despesa_ano2.innerHTML = `R$ ${gasto_ano2.toFixed(2)}`;
+
+        var diferenca = gasto_ano - gasto_ano2;
+        valor_economizado.innerHTML = `R$ ${diferenca.toFixed(2)} (${((diferenca * 100) / gasto_ano).toFixed(1)}%)`;
+
+        resultado_economia.style.display = 'block';
+        
+    }
+</script>
