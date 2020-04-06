@@ -1,0 +1,42 @@
+
+
+/* Colocando img no background da div*/
+#div_principal{
+    clear: both;
+    background-image: url('Mundo.jpg');
+    background-size: 100%; 
+    min-height:430px;
+    padding: 100px;
+    /* margem interna*/
+    
+    }
+
+.efeito{
+        /* Coloca um fundinho atrás do que está escrito*/
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Arruma a margem interna em suas margens cima/baixo */
+        padding: 100px 0px 100px 0px;
+    }
+
+.container{
+        width: 1000px;
+        margin: auto;
+    }
+
+h1{
+    color: rgb(242, 243, 239);
+    text-align: center;
+        /* Alinha o texto ao centro*/
+    text-shadow:5px 5px 3px #111111;
+        /* Coloca sombra no texto*/
+    }
+        
+h3{
+    color: rgb(242, 243, 239);
+    text-align: center;
+            /* Alinha o texto ao centro*/
+    text-shadow:5px 5px 3px #111111;
+            /* Coloca sombra no texto*/
+    font-family: Arial, Helvetica, sans-serif
+}
+            
