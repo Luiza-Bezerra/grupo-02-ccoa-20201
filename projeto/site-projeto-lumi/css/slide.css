@@ -1,8 +1,9 @@
 
 .slidershow{
-  width: 100%;
-  height: 400px;
+  width: 80%;
+  height: 600px;
   overflow: hidden;
+  margin-left: 10%; 
 }
 .middle{
   position: relative;
