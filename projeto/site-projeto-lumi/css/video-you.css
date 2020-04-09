@@ -20,6 +20,66 @@
      
 
 }
+.historia{
+    background-color: white;
+    width: 20%;
+    height: 400px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.219);
+    padding-right: 20px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    margin-left: 6%;
+    margin-top: 30px;
+    font-size: 12pt;
+    text-align: center;
+    
+}
+.missao{
+    background-color: white;
+    width: 20%;
+    height: 400px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.219);
+    padding-right: 20px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    margin-left: 6%;
+    margin-top: 30px;
+    float: right;
+    position: absolute;
+    top: 80px;
+    left: 400px;
+    font-size: 14pt;
+    text-align: center;
+}
+img#ssw, img#historia{
+   
+    width: 80px;
+}
+img#valores{
+    position: relative;
+    left: 5pc;
+    margin: 10pt;
+    width: 60px;
+}
+h1#titulo{
+    text-align: center;
+}
+.valores{
+    background-color: white;
+    width: 20%;
+    height: 400px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.219);
+    padding-right: 20px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    margin-left: 6%;
+    margin-top: 30px;
+    float: right;
+    position: absolute;
+    top: 80px;
+    left: 800px;
+    font-size: 14pt;
+}
 .frame{
     width: 600px;
     height: 80%;
@@ -37,10 +97,7 @@
     background-color: gold;
     border-radius: 10px;
 }
-.video-youtube:hover{
-   
-    border: 2px solid #FFD700;
-}
+
 
 
 

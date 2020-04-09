@@ -16,6 +16,7 @@
 .corpo .corpo-texto{
     margin-top: 10px;
     text-align: center;
+    font-size: 14pt;
 }
 .fotos{
     width: 100%;
@@ -29,12 +30,12 @@
 }
 .imagem-int{
     float: left;
-    height: 300px;
+    height: 250px;
     padding: 20px;
 }
 .imagem-int2{
     float: left;
-    height: 300px; 
+    height: 250px; 
      
     padding: 20px;
 }
