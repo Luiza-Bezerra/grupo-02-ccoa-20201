@@ -1,84 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dash.css">
+
     <link rel="stylesheet" href="css/cadastro.css">
 
-    <title>Cadastro</title>
+    <title>Cadastro de Filial</title>
 </head>
-<body>
-  
+
+<body id="filial">
     <div class="header">
         <div class="container">
             <div class="title-header">
-                <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
+                <img src="img/desk-lamp.png" class="logo">
+                <h1><span id="lumi">Lumi</span>nous</h1>
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="index.html" >Início</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="simulador.html">Simulador</a></li>
-                    <li><a href="pacotes.html" >Pacotes</a></li>
-                   
-                   
-                  
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Controle</a></li>
+                    <li><a href="filial.html" class="current">Cadastrar Filiais</a></li>
+                    <li class="nav-end"><a href="#" class="dropbtn">Configurações</a>
+                        <div class="dropdown-content">
+                            <a href="#">Conta</a>
+                            <a href="#">Duvidas</a>
+                            <a href="#">Sair</a>
+                        </div>
+                    </li>
                 </ul>
-               
-              
-              
-            </div>
-            <div class="nav-end">
-                <ul>
-                    <li class="l2" ><a href="cadastro.html"> <span id="l3">Cadastrar</span> </a></li>
-                    <li class="l2"><a href="login.html">Entrar</a></li>
-                </ul>
-               
-              
-              
             </div>
         </div>
-    </div>
 
+    </div>
+    </div>
     <form class="box" action="index.html">
         <h1>Cadastro de Filial</h1>
-        <input type="text"class="input" placeholder="Número da Filial">
-        <input type="text"class="input" placeholder="1º Número de Telefone">
-        <input type="text"class="input" placeholder="2º Número de Telefone">
-        <input type="text"class="input" placeholder="Estado">
-        <input type="text"class="input" placeholder="Cidade">
-        <input type="text"class="input" placeholder="Bairro">
-        <input type="text"class="input" placeholder="Rua">
-        <input type="text"class="input" placeholder="Número">
-        <input type="text" class="input"placeholder="Confirmar Senha">
+        <input type="text" class="input" placeholder="Número da Filial">
+        <input type="text" class="input" placeholder="1º Número de Telefone">
+        <input type="text" class="input" placeholder="2º Número de Telefone">
+        <select name="" id="" class="select">
+            <option value="RO" class="option">RO</option>
+            <option value="AC" class="option">AC</option>
+            <option value="AM" class="option">AM</option>
+            <option value="RR" class="option">RR</option>
+            <option value="PA" class="option">PA</option>
+            <option value="AP" class="option">AP</option>
+            <option value="TO" class="option">TO</option>
+            <option value="MA" class="option">MA</option>
+            <option value="PI" class="option">PI</option>
+            <option value="CE" class="option">CE</option>
+            <option value="RN" class="option">RN</option>
+            <option value="PB" class="option">PB</option>
+            <option value="PE" class="option">PE</option>
+            <option value="AL" class="option">AL</option>
+            <option value="SE" class="option">SE</option>
+            <option value="BA" class="option">BA</option>
+            <option value="MG" class="option">MG</option>
+            <option value="ES" class="option">ES</option>
+            <option value="RJ" class="option">RJ</option>
+            <option value="SP" class="option">SP</option>
+            <option value="PR" class="option">PR</option>
+            <option value="SC" class="option">SC</option>
+            <option value="RS" class="option">RS</option>
+            <option value="MS" class="option">MS</option>
+            <option value="MT" class="option">MT</option>
+            <option value="GO" class="option">GO</option>
+            <option value="DF" class="option">DF</option>
+        </select>
+        <input type="text" class="input" placeholder="Cidade">
+        <input type="text" class="input" placeholder="Bairro">
+        <input type="text" class="input" placeholder="Rua">
+        <input type="text" class="input" placeholder="Número">
+        <input type="text" class="input" placeholder="Confirmar Senha">
         <input type="submit" class="btn" value="Cadastrar">
     </form>
-
     <div class="footer">
         <div class="container-footer-left">
-            <p><h2>Sobre a Luminous</h2></p>
-            <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica, percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz, então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.</p>
+            <p>
+                <h2>Sobre a Luminous</h2>
+            </p>
+            <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia
+                elétrica, percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos
+                relacionados a luz, então decidimos agir para que essas instituições possam economizar dinheiro através
+                do controle desse gastos.</p>
         </div>
         <div class="container-footer-right">
             <div class="icons">
                 <ul>
-                   <li>  <img src="img/instagram.png"  class="logo" alt=""> </li> <img src="" alt="">
-                   <li><img src="img/facebook.png"  class="logo" alt=""></li>
-                   <li><img src="img/twitter.png" class="logo" alt=""></li>
-                   <li><img src="img/linkedin.png" class="logo"  alt=""></li>
+                    <li> <img src="img/instagram.png" class="logo" alt=""> </li> <img src="" alt="">
+                    <li><img src="img/facebook.png" class="logo" alt=""></li>
+                    <li><img src="img/twitter.png" class="logo" alt=""></li>
+                    <li><img src="img/linkedin.png" class="logo" alt=""></li>
                 </ul>
             </div>
-                </div>
+        </div>
     </div>
-    
-    
     <div class="footer_copyright">
         © copyright <b>Luminous</b>. All Rights Reserved. <br>
         Design by <b>Equipe de Ti da Luminous.</b>
     </div>
 </body>
+
 </html>
-
-
-  
