@@ -1,4 +1,7 @@
-
+body#filial{
+    background: url(../img/predio2.jpg);
+    background-size: 100% 100%;
+}
 .box h1{
     color: white;
     font: bold;
@@ -25,7 +28,7 @@
     margin-bottom: 100px;
 }
 
-.box .input{
+.box .input, .select{
     border:0;
     background: none;
     display: block;
@@ -38,11 +41,21 @@
     color: white;
     border-radius: 24px;
     transition: 0.25s;
+    background-color: #363636;
 }
+
 .box .input:focus{
     width: 280px;
     border: 2px solid #FFD700;
 
+}
+.select:focus{
+    width: 310px;
+    border: 2px solid #FFD700;
+
+}
+.select{
+    width: 220px;
 }
 .btn{
     border:0;
