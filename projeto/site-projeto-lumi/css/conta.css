@@ -1,0 +1,227 @@
+body{
+    background-color: 		#f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.header{
+    width: 100%;
+    min-height: 70px;
+    max-height: 75px;
+   background: black;
+    margin: 0;
+    overflow: hidden;
+    border-bottom: 2px solid #FFD700;
+}
+.container{
+    margin: auto;
+    width: 80%;
+    background: black;
+    overflow: hidden;
+    padding: 10px;
+ 
+}
+#lumi{
+    color: #FFD700;
+}
+ul{
+    list-style-type: none;
+    display: inline;
+    margin: auto;
+    }
+.nav{
+    margin-top: 25px;
+    margin-left: 30%;
+  
+    width: 70%; 
+    }
+ .nav li{
+    display: inline;
+    padding-right: 3px;
+    color: white;
+    margin: auto;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.nav li:hover{
+    border-bottom: 2px solid #FFD700;
+    border-right: 2px solid #FFD700;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.current{
+ 
+    color: #FFD700;
+}
+.header .title-header h1{
+   
+    color: white;
+    float: left;
+   
+ 
+}
+.logo{
+    float: left;
+    max-width: 50px;
+    max-height:50px ;
+  
+    color:	#FFD700;
+}
+.nav-end{
+    float: right;
+}
+
+
+dropdown {
+    float: right;
+    overflow: hidden;
+    color: black;
+    
+  }
+  
+  /* Dropdown button */
+ .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #FFD700;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+
+  }
+  
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.897);
+    z-index: 1;
+    
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+ 
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #FFD700;
+  }
+  
+  /* Show the dropdown menu on hover */
+.nav-end:hover .dropdown-content {
+    display: block;
+    border: 2px solid #FFD700;
+  }
+  .nav-end:hover{
+      border: 2px solid #FFD700;
+      
+  }
+  
+
+.footer {
+    height: auto;
+    
+    background-color: #232323;
+    border-top: #ffd700 3px solid;
+    color: #f4f4f4;  
+    overflow: hidden;
+    
+}
+.container-footer-left{
+    float: left;
+    width: 39.3%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+.container-footer-right{
+    float: right;
+    width: 50%;
+}
+
+.footer_copyright{
+    height: 50px;
+    width:100%;
+    background-color: #232323;
+    border-top: #ffd700 1px solid;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.icons li{
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+.icons{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.conta{
+    width: 100%;
+    height: 500px;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+}
+.titulo{
+    width: 60%;
+    height: 400px;
+    background-color: #ffffff;
+    margin-left: 20%;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.267);
+}
+.titulo h3{
+    text-align: center;
+    background-color:#232323;
+    border-radius: 10px 20px;
+    width: 80%;
+    margin-left: 10%;
+    color: #FFD700;
+    
+}
+.espaco{
+    height: 20px;
+}
+.dados{
+    width: 60%;
+    margin-left: 20%;
+    
+    
+}
+.dados-nome{
+    float: left;
+}
+.dados-cpf{
+    float: left;
+    margin-left: 20px;
+}
+.dados-tel-fixo{
+    float: left;
+    margin-left: 20px;
+}
+.dados-tel-cel{
+    float: left;
+    margin-top: 10px;
+}
+.input-resultado{
+   padding-left: 4px;
+   width: 140px;
+}
+    
+
