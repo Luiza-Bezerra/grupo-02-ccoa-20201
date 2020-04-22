@@ -103,7 +103,7 @@ a{
     margin-left: 30px;
     padding-left: 10px;
 }
-dropdown {
+.dropdown {
     float: right;
     overflow: hidden;
     color: black;
