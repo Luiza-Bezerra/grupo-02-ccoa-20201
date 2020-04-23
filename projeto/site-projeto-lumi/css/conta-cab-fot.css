@@ -1,45 +1,4 @@
-
-.grafico{
-    width: 95%;
-    height: 300px;
-    background: white;
-    margin: auto;
-    overflow: hidden;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 2px gray;
-    margin-top: 10px;
- 
-}
-.input{
-    width: 95%;
-    margin: auto;
-}
-
-.input-conteudo{
-    color: black;
-    border-radius: 10px;
-    background: white;
-    border: 1px solid black;
-    width: 170px;
-    height: 30px;
-    margin-top: 20px;
-    margin-left: 30px;
-    padding-left: 10px;
-}
-dropdown {
-    float: right;
-    overflow: hidden;
-    color: black;
-    
-  }
-  .title{
-      width: 70%;
-      margin: auto;
-     text-align: center;
-     border-bottom: 2px solid black;
-  }
-  body{
+body{
     background-color: 		#f4f4f4;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -89,23 +48,20 @@ dropdown {
     margin-top: 5px;
 }
 .nav .nav-dash{
-    font-weight: bold;
     margin-top: 10px;
     margin-left: 100px;
-    width: 15px;
-    margin-right: 150px;
-}
-.nav .nav-dash a{
-    color:  #ffd700;
+    margin-right: 90px;
     font-weight: bold;
 }
-.nav .nav-jogos{
+.nav .nav-dash:hover{
+    border-bottom: #ffd700 2px solid;
+}
+.nav .nav-controle{
     font-weight: bold;
     margin-top: 10px;
-    width: 70px;
-    margin-right: 45px;
+    margin-right: 55px;
 }
-.nav .nav-favoritos{
+.nav .nav-filiais{
     font-weight: bold;
     margin-top: 10px;
     margin-left: 10px;
@@ -114,10 +70,10 @@ dropdown {
     
     
 }
-.nav .nav-jogos:hover{
+.nav .nav-controle:hover{
     border-bottom: #ffd700 2px solid;
 }
-.nav .nav-favoritos:hover{
+.nav .nav-filiais:hover{
     border-bottom: #ffd700 2px solid;
 }
 
@@ -138,8 +94,8 @@ dropdown {
     height: 50px;
     width: 50px;
 }
-.nav-dropdown{
-    margin-left: 17%;
+.header .nav-dropdown{
+    
     overflow: hidden;
     float: right;
 }
