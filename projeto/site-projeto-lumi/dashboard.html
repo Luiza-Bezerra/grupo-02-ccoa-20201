@@ -7,29 +7,35 @@
     <title>Dashboard</title>
 </head>
 <body>
+    
     <div class="header">
         <div class="container">
+            <div>
+                <img class="icon-ball" src="img/desk-lamp.png" alt="">
+            </div>
             <div class="title-header">
-                <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
+               <b><span class="highlight" style="font-size: 30px;"><span style="color:  #ffd700;">Lumi</span>nous</span></b>
             </div>
             <div class="nav">
                 <ul>
-                    <li ><a href="Dashboard.html" class="current">Dashboard</a></li>
-                    <li><a href="#">Controle</a></li>
-                    <li><a href="#">Cadastrar Filiais</a></li>
-                    <li class="nav-end"><a href="#" class="dropbtn">Configurações</a>
+                    <li class="nav-dash"><a href="#">Dashboard</a></li>
+                    <li class="nav-jogos"><a href="#">Controle</a></li>
+                    <li class="nav-favoritos"><a href="filial.html">Cadastrar Filiais</a></li>
+                    <li class="nav-dropdown">
+                        <button class="dropbtn">
+                            <img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, Vinicius</span>
+                        </button>
                         <div class="dropdown-content">
                             <a href="#">Conta</a>
-                            <a href="#">Duvidas</a>
-                            <a href="index.html">Sair</a>
-                          </div>  
+                            <a class="doubt" href="#">Duvidas</a>
+                            <a class="sign-out" href="#">Sair</a>
+                          </div>
                     </li>
                 </ul>
             </div>
         </div>
-       
     </div>
-    </div>
+
     <div class="input">
         <h2 style="float: left;">Filtrar Gráficos:</h2>
         <select  id="" class="input-conteudo">
