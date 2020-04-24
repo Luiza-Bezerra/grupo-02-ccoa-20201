@@ -10,10 +10,8 @@ body{
 .container{
     margin: auto;
     width: 80%;
-    background: #232323;
     overflow: hidden;
     padding: 10px;
-    height: 58px;
 }
 .header{
     background-color: #232323;
