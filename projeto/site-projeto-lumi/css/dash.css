@@ -91,9 +91,9 @@ dropdown {
 .nav .nav-dash{
     font-weight: bold;
     margin-top: 10px;
-    margin-left: 100px;
-    width: 15px;
-    margin-right: 150px;
+    margin-left: 50px;
+  
+    margin-right: 100px;
 }
 .nav .nav-dash a{
     color:  #ffd700;
@@ -103,13 +103,12 @@ dropdown {
     font-weight: bold;
     margin-top: 10px;
     width: 70px;
-    margin-right: 45px;
+    margin-right: 100px;
 }
 .nav .nav-favoritos{
     font-weight: bold;
     margin-top: 10px;
-    margin-left: 10px;
-    margin-left: 30px;
+   
     
     
     
@@ -118,6 +117,9 @@ dropdown {
     border-bottom: #ffd700 2px solid;
 }
 .nav .nav-favoritos:hover{
+    border-bottom: #ffd700 2px solid;
+}
+.nav .nav-dash:hover{
     border-bottom: #ffd700 2px solid;
 }
 

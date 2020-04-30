@@ -42,12 +42,11 @@
         </div>
     </div>
    
-    <form class="box" action="dashboard.html">
+    <form class="box" >
         <h1>Entrar</h1>
-        <input class="input" placeholder="Email">
-        <input type="password" class="input" placeholder="Senha">
-       
-        <input type="submit" class="btn" value="Logar">
+        <input class="input" placeholder="Email" id="em">
+        <input type="password" class="input" placeholder="Senha" id="se">
+        <button  class="btn" onclick="logar()">Logar</button>
     </form>
 
     <div class="footer">
@@ -74,6 +73,25 @@
     </div>
 </body>
 </html>
+<script>
+ 
+    function logar(){
+    
+        var m = document.getElementById('em').value;
+        var p = document.getElementById('se').value;
+   if (m=="email" && p=="123"){
+        window.alert("O utilizador ou a password encontram-se corretos.");
+        location.href = 'dashboard.html';
+   }
+   else{
+      window.alert("O utilizador ou a password encontram-se incorretos.");
+      
+     
+   }
+}
+ 
+</script>
+
 
 
   

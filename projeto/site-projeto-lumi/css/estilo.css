@@ -17,7 +17,7 @@ body{
     margin: auto;
     min-height: 70px;
     max-height: 75px;
-    border-bottom: #FFD700 3px solid;
+    border-bottom: #FFD700 1px solid;
  
 
 }
@@ -38,27 +38,27 @@ body{
 .header li{
     float: left;
     display: inline;
-    padding-left: 25px ;
-    padding-right: 25px;
-    font-weight: bold;
+    margin-right: 30px;
+ 
 }
 .header .l2{
     float: right;
     display: inline;
-    padding-left: 25px ;
-    padding-right: 25px;
-    font-weight: bold;
+   
+    
 }
 
 .header li:hover{
    
     color: #FFD700;
+    border-bottom: 2px solid #ffd700;
     
  
 }
 .nav{
     float: left;
     margin-top: 15px;
+    margin-left: 100px;
 }
 .nav .current{
  color: #FFD700;

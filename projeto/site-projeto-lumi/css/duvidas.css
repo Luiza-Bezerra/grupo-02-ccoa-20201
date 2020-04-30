@@ -1,0 +1,55 @@
+.title{
+    border-bottom: 2px solid black;
+    text-align: center;
+
+}
+.duvida{
+    border-radius: 10px;
+    height: 300px;
+    width: 500px;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.duvida .escre{
+    width: 300px;
+    height: 30px;
+    border: none;
+    background-color: gainsboro;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.duvida  .duvidando:focus{
+    width: 300px;
+    height: 100px;
+    border: none;
+    background-color: gainsboro;
+    margin: auto;
+    margin-top: 20px;
+    text-align: start;
+   
+
+}
+.duvida button{
+    background-color: #ffd700;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+.duvida button:hover{
+    background-color: white;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    
+
+}
