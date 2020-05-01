@@ -42,11 +42,12 @@
         </div>
     </div>
    
-    <form class="box" >
+    <form class="box" action="dashboard.html" onsubmit="return logar()">
         <h1>Entrar</h1>
         <input class="input" placeholder="Email" id="em">
         <input type="password" class="input" placeholder="Senha" id="se">
         <button  class="btn" onclick="logar()">Logar</button>
+        <span id="errado"></span>
     </form>
 
     <div class="footer">
@@ -79,12 +80,13 @@
     
         var m = document.getElementById('em').value;
         var p = document.getElementById('se').value;
-   if (m=="email" && p=="123"){
-        window.alert("O utilizador ou a password encontram-se corretos.");
-        location.href = 'dashboard.html';
+   if (m=="luminous@gmail.com" && p=="123456"){
+       
+        return true;
    }
    else{
-      window.alert("O utilizador ou a password encontram-se incorretos.");
+      errado.innerHTML = '<b style="color:red;">Email ou Senha incorretos</b>'
+    return false;
       
      
    }
