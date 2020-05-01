@@ -46,32 +46,38 @@ body{
     margin-top: 5px;
 }
 .nav .nav-dash{
-    margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 90px;
     font-weight: bold;
+    margin-top: 10px;
+    margin-left: 50px;
+  
+    margin-right: 100px;
+}
+.nav .nav-dash a{
+    color:  #ffd700;
+    font-weight: bold;
+}
+.nav .nav-jogos{
+    font-weight: bold;
+    margin-top: 10px;
+    width: 70px;
+    margin-right: 100px;
+}
+.nav .nav-favoritos{
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+   
+    
+    
+    
+}
+.nav .nav-jogos:hover{
+    border-bottom: #ffd700 2px solid;
+}
+.nav .nav-favoritos:hover{
+    border-bottom: #ffd700 2px solid;
 }
 .nav .nav-dash:hover{
-    border-bottom: #ffd700 2px solid;
-}
-.nav .nav-controle{
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: 55px;
-}
-.nav .nav-filiais{
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-left: 30px;
-    
-    
-    
-}
-.nav .nav-controle:hover{
-    border-bottom: #ffd700 2px solid;
-}
-.nav .nav-filiais:hover{
     border-bottom: #ffd700 2px solid;
 }
 
@@ -92,8 +98,8 @@ body{
     height: 50px;
     width: 50px;
 }
-.header .nav-dropdown{
-    
+.nav-dropdown{
+    margin-left: 17%;
     overflow: hidden;
     float: right;
 }
@@ -154,6 +160,7 @@ body{
   .nav-dropdown:hover .ola {
     border-bottom: #ffd700 2px solid;
   }
+
 
 /* end Header*/
   .title{
