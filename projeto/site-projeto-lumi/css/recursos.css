@@ -14,7 +14,7 @@ body{
 .container-features-content-economic{
     background-image: url('../img/economia.png');
     background-size: 1130px 530px;
-
+    margin-top: 40px;
     background: no-repeats;
     width: 84%;
     height: 530px;

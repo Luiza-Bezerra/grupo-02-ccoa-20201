@@ -48,7 +48,7 @@ body{
 .nav .nav-dash{
     font-weight: bold;
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 87px;
   
     margin-right: 100px;
 }
@@ -59,7 +59,6 @@ body{
 .nav .nav-jogos{
     font-weight: bold;
     margin-top: 10px;
-    width: 70px;
     margin-right: 100px;
 }
 .nav .nav-favoritos{
@@ -99,7 +98,7 @@ body{
     width: 50px;
 }
 .nav-dropdown{
-    margin-left: 17%;
+    margin-left: 18%;
     overflow: hidden;
     float: right;
 }

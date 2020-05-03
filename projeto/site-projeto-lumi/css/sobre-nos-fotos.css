@@ -31,8 +31,8 @@
     box-shadow: 3px 3px 3px 3px rgba(155, 155, 155, 0.301);
 }
 .change-1 .change-top-1 {
-    background-image: url("../img/rhian.jpeg");
-    background-size: 100%;
+    background-image: url("../img/andre.jpeg");
+    background-size: 90%;
     height: 90%;
     border-radius: 4px 4px 0px 0px;
 }
@@ -41,7 +41,7 @@
     transition: 1s;
 }
 .change-top-1:hover {
-    background-size: 120%;
+    background-size: 110%;
     transition: 0.8s;
 }
 .change-1 .change-bottom  {
@@ -206,7 +206,7 @@
 
 }
 .change-6 .change-top-6 {
-    background-image: url("../img/rhian.jpeg");
+    background-image: url("../img/william.jpeg");
     background-size: 100%;
     height: 90%;
     border-radius: 4px 4px 0px 0px;
