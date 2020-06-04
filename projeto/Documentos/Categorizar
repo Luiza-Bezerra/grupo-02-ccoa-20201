@@ -1,1 +1,43 @@
-<mxfile host="app.diagrams.net" modified="2020-06-04T15:40:09.257Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36" version="13.1.14" etag="Rnu5eWx3PuoEkwti8AZB" type="github"><diagram id="yupIIMl87_NJoOT_CSqa">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-06-04T15:53:19.817Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36" etag="AHot0V-tK9LEOcYROwFQ" version="13.1.14" type="github">
+  <diagram id="yupIIMl87_NJoOT_CSqa" name="Page-1">
+    <mxGraphModel dx="835" dy="325" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tdGDJrFkfOQiMZ0mH9GX-2" target="tdGDJrFkfOQiMZ0mH9GX-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-2" value="Classifcar o problema em (incidente ou requisição )" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="35" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tdGDJrFkfOQiMZ0mH9GX-3" target="tdGDJrFkfOQiMZ0mH9GX-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-3" value="Priorizar o problema" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="35" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tdGDJrFkfOQiMZ0mH9GX-4" target="tdGDJrFkfOQiMZ0mH9GX-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="30" y="40" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tdGDJrFkfOQiMZ0mH9GX-5" target="tdGDJrFkfOQiMZ0mH9GX-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-5" value="especie do problema&lt;br&gt;(hardware ou software)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="35" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tdGDJrFkfOQiMZ0mH9GX-7" target="tdGDJrFkfOQiMZ0mH9GX-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-7" value="Criar relatório do problema e registrar" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="140" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tdGDJrFkfOQiMZ0mH9GX-8" value="Fim" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="160" width="80" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
