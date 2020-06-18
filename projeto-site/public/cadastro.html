@@ -1,39 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt">
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página com exemplo de Cadastro de usuário</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/desk-lamp.png">
+    <link rel="stylesheet" href="css/cadastro.css">
 
+    <title>Cadastro</title>
 </head>
-
 <body>
-
-    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
-        Nome: <input type="text" name="nome" required minlength="4">
-        <br>
-        Usuário: <input type="text" name="login" required minlength="4">
-        <br>
-        Senha: <input type="password" name="senha" required minlength="4">
-        <br>
-        <button id="btn_entrar">Cadastrar</button>
+  
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html" >Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="pacotes.html" >Pacotes</a></li>
+                   
+                   
+                  
+                </ul>
+               
+              
+              
+            </div>
+            <div class="nav-end">
+                <ul>
+                    <li class="l2" ><a href="cadastro.html"> <span id="l3">Cadastrar</span> </a></li>
+                    <li class="l2"><a href="login.html">Entrar</a></li>
+                </ul>
+               
+              
+              
+            </div>
+        </div>
+    </div>
+    <div class="div_title">
+        <span>Cadastro</span>   
+    </div>
+    <div class="caixa">
+    <form class="box" action="" method="POST" id="form_cadastro" onsubmit="return cadastrar()">
+        <h1>Empresa</h1>
+        <input class="input" placeholder="Cnpj" type="text" name="cnpj">
+        <input type="text"class="input" placeholder="Nome da Empresa" name="nomeEmpresa">
+        <input type="text"class="input" placeholder="Telefone 1" name="tel1">
+        <input type="text"class="input" placeholder="Telefone 2" name="tel2">
+        <h1>Representante</h1>
+        <input type="text"class="input" placeholder="Nome Representante" name="nomeRepre">
+        <input class="input" placeholder="CPF" name="cpf">
+        <input type="text"class="input" placeholder="Data de Nascimento" name="dataNasc">
+        <input type="text"class="input" placeholder="RG" name="rg">
+        <input type="text"class="input" placeholder="Email" name="email">
+        <input type="password"class="input" placeholder="Senha" name="senha">
+        <input type="password" class="input"placeholder="Confirmar Senha">
+        <input type="submit" class="btn" value="Cadastrar">
     </form>
     
-    <img src="aguarde2.gif" id="img_aguarde" style="display: none;" width="100px">
-    
-    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
-        Erro no cadastro
+
+     
+        
+   
+</div>
+<div class="footer">
+    <div class="container-footer-left">
+      <p>
+        <h2>Sobre a Luminous</h2>
+      </p>
+      <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica,
+        percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz,
+        então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
+      </p>
     </div>
-
+    <div class="container-footer-right">
+      <div class="icons">
+        <ul>
+          <a target="_blank" href="https://www.instagram.com/empresa_luminous/"><li> <img src="img/instagram.png" class="logo" alt=""> </li></a>
+          <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour"><li><img src="img/facebook.png" class="logo" alt=""></li></a>
+          <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-"><li><img src="img/github.png" class="logo" alt=""></li></a>
+          <a target="_blank" href=""><li><img src="img/linkedin.png" class="logo" alt=""></li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer_copyright">
+    © copyright <b>Luminous</b>. All Rights Reserved. <br>
+    Design by <b>Equipe de Ti da Luminous.</b>
+  </div>
 </body>
-
 </html>
 <script>
-
     function cadastrar() {
-        aguardar();
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -48,25 +110,18 @@
 
                 console.log('Erro de cadastro!');
                 response.text().then(function (resposta) {
-                    div_erro.innerHTML = resposta;
+                    
                 });
-                finalizar_aguardar();
+           
             }
         });
 
         return false;
     }
 
-    function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.display='block';
-        div_erro.style.display='none';
-    }
-
-    function finalizar_aguardar() {
-        btn_entrar.disabled = false;
-        img_aguarde.style.display='none';
-        div_erro.style.display='block';
-    }
+    
 
 </script>
+
+
+  

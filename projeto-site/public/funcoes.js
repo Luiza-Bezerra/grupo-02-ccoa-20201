@@ -1,10 +1,16 @@
 let login_usuario;
 let nome_usuario;
+let cnpj_empresa;
+let senha;
 
 function redirecionar_login() {
     window.location.href = 'login.html';
 }
-
+function trocarTela(){
+    cnpj_empresa = sessionStorage.cnpj_empresa_meuapp;
+    senha = sessionStorage.senha_meuapp;
+    cn.value =  cnpj_empresa;
+}
 function verificar_autenticacao() {
     login_usuario = sessionStorage.login_usuario_meuapp;
     nome_usuario = sessionStorage.nome_usuario_meuapp;
@@ -13,6 +19,7 @@ function verificar_autenticacao() {
         redirecionar_login();
     } else {
         b_usuario.innerHTML = nome_usuario;
+        trocarTela()
         validar_sessao();
     }
     

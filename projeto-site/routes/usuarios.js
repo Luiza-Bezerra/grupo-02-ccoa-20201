@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var sequelize = require('../models').sequelize;
 var Usuario = require('../models').Usuario;
+var Empresa = require('../models').Empresa;
 
 let sessoes = [];
 
@@ -9,10 +10,11 @@ let sessoes = [];
 router.post('/autenticar', function(req, res, next) {
 	console.log('Recuperando usuário por login e senha');
 
-	var login = req.body.login; // depois de .body, use o nome (name) do campo em seu formulário de login
-	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
-	
-	let instrucaoSql = `select * from usuario where Email='${login}' and Senha='${senha}'`;
+	var email = req.body.emailLogin; // depois de .body, use o nome (name) do campo em seu formulário de login
+	var senha = req.body.senhaLogin; // depois de .body, use o nome (name) do campo em seu formulário de login	
+	email.trim()
+	senha.trim()
+	let instrucaoSql = `select * from usuario where Email='${email}' and Senha='${senha}'`;
 	console.log(instrucaoSql);
 
 	sequelize.query(instrucaoSql, {
@@ -37,22 +39,75 @@ router.post('/autenticar', function(req, res, next) {
 });
 
 /* Cadastrar usuário */
-router.post('/', function(req, res, next) {
+router.post('/cadastrar', function(req, res, next) {
 	console.log('Criando um usuário');
 	
 	Usuario.create({
-		nome : req.body.nome,
-		login : req.body.login,
-		senha: req.body.senha
-	}).then(resultado => {
+		nome : req.body.nomeRepre,
+		email : req.body.email,
+		tipousuario: "A",
+		cpf: req.body.cpf,
+		rg: req.body.rg,
+		datanasc: req.body.dataNasc,
+		senha: req.body.senha,
+		fkcnpj:req.body.cnpj
+		}).then(resultado => {
 		console.log(`Registro criado: ${resultado}`)
         res.send(resultado);
     }).catch(erro => {
 		console.error(erro);
 		res.status(500).send(erro.message);
-  	});
+	  });
+	 Empresa.create({
+	 	idempresa: req.body.cnpj,
+	 	nome : req.body.nomeEmpresa,
+		telefone : req.body.tel1,
+		celular : req.body.tel2
+		
+	 	}).then(resultado => {
+	 	console.log(`Registro criado: ${resultado}`)
+         res.send(resultado);
+     }).catch(erro => {
+	 	console.error(erro);
+	 	res.status(500).send(erro.message);
+  	 });
 });
+//cadastrar filial
+router.post('/filial',function(res,req,nexy){
+	console.log('Criando filial');
+	Usuario.create({
+		nome : req.body.nome,
+		email : req.body.email,
+		tipousuario: "G",
+		cpf: req.body.cpf,
+		rg: req.body.rg,
+		datanasc: req.body.dataNasc,
+		senha: req.body.senha,
+		fkcnpj:req.body.fkCnpj
+		}).then(resultado => {
+		console.log(`Registro criado: ${resultado}`)
+        res.send(resultado);
+    }).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+	  });
+	  Filial.create({
+		  telefone: req.body.telefone,
+		  rua: req.body.rua,
+		  bairro: req.body.bairro,
+		  cidade: req.body.cidade,
+		  numero: req.body.numero,
+		  fkcnpj: req.body.fkCnpj,
+		  fkusuario: Usuario.Usuario
+	  }).then(resultado =>{
+		  console.log(`Registro criado: ${resultado}`)
+		  res.send(resultado);
+	  }).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+	  });
 
+})
 
 /* Verificação de usuário */
 router.get('/sessao/:login', function(req, res, next) {
