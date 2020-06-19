@@ -27,9 +27,10 @@
                     <li class="nav-jogos"><a href="conta.html">Conta</a></li>
                     <li class="nav-favoritos"><a href="filial.html">Cadastrar Filiais</a></li>
                     <li class="nav-dropdown">
-                        <button class="dropbtn">
-							<img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, <span id="b_usuario"></span></span>
-                        </button>
+                        <button   class="dropbtn">
+							<img class="icon-user" src="img/user.png" alt=""><div class="ola">Olá, <span  id="b_usuario"></span></div>
+						</button>
+				
                         <div class="dropdown-content">
                             
                             <a class="doubt" href="duvidas.html">Duvidas</a>
@@ -41,27 +42,25 @@
         </div>
     </div>
 
-    <div class="input">
-        <h2 style="float: left;">Filtrar Gráficos:</h2>
-        <select  id="" class="input-conteudo">
-            <option value="">Dia</option>
-            <option value="">Mês</option>
-            <option value="">Ano</option>
-
-        </select>
-        <input type="text" placeholder="Data Especifica(23/09/2020)"  class="input-conteudo">
-    </div>
+    
  
-    <div class="title"><h1>Gráficos de Luminosidade e Gastos</h1></div>
+</div> <div class="div_title">
+	<span>Gráfico de Luminosidade</span>   
+</div>
     <div class="grafico">
-		<div style="width:75%;">
+		<div style="width:95%;">
 			<div id="div_aguarde">Dados sendo obtidos...</div>
 			<canvas id="canvas_grafico"></canvas>
 		</div>
-		<div style=width:85%; id="chart_div">
-			<canvas id="LineChart"  height="500px"></canvas>
-		</div>
-    </div>
+	</div>
+</div> <div class="div_title">
+	<span>Gráfico de Gastos / Mês</span>   
+</div>
+<div class="grafico">
+	<div style=width:107%; id="chart_div">
+		<canvas id="LineChart"  height="500px"></canvas>
+	</div>
+</div>
     <div class="footer">
 		<div class="container-footer-left">
 		  <p>
@@ -222,6 +221,7 @@ function plotarGrafico(dados) {
 var script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "https://luminous.ngdesk.com/widgets/chat/5eea3c9b48c71a0007baf739/chat_widget.js";
+
 document.getElementsByTagName("head")[0].appendChild(script);
 </script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -248,8 +248,8 @@ function drawAxisTickColors() {
             fontSize: 20,
             fontName: 'Times',
             bold: true,
-        
           },
+		  
           titleTextStyle: {
             color: 'black',
             fontSize: 18,
@@ -265,6 +265,7 @@ function drawAxisTickColors() {
             fontSize: 18,
             bold: false
           },
+		  
           titleTextStyle: {
             color: 'black',
 			fontName: 'Times',
@@ -272,8 +273,8 @@ function drawAxisTickColors() {
             bold: false
           },
         },
-        colors: ['red', 'green']
-		
+        colors: ['red', 'green'],
+		legend: { position: "bottom" }
       };
       var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
       chart.draw(data, options);
