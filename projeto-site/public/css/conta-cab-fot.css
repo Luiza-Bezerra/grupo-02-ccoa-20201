@@ -7,7 +7,9 @@ body{
     line-height: 1.5;
 }
 #b_usuario{
-    font-size: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    
 }
 .container{
     margin: auto;
@@ -100,12 +102,18 @@ body{
     width: 50px;
 }
 .nav-dropdown{
-    margin-left: 18%;
+    margin-left: 14%;
     overflow: hidden;
     float: right;
 }
+.dropbtn{
+    display: inline-flex;
+    flex-direction: row;
+    justify-items: right;
+    
+}
 .nav-dropdown .dropbtn{
-    width: 156px;
+    width: 185px;
     border: none;
     outline: none;
     background-color:#232323;
@@ -120,7 +128,7 @@ body{
     margin-top: 8px;
     color: rgb(255, 255, 255);
     font-size: 17px;
-    
+    margin-left: 5px;
 }
 
 .nav-dropdown:hover .dropbtn {

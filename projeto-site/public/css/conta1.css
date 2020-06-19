@@ -4,14 +4,16 @@
 
 
 .conta{
-    width: 80%;
+    width: 77%;
+    margin-left: 10%;
     height: 1000px;
     background-color: #ffffff;
     margin-top: 20px;
     margin-bottom: 25px;
     margin-left: 10%;
     padding: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(175, 175, 175, 0.322);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 3px 3px 3px 3px rgba(155, 155, 155, 0.301);
 }
 
 .titulo{

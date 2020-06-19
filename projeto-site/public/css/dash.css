@@ -1,18 +1,38 @@
 
 .grafico{
-    width: 95%;
-  
+    width: 77%;
+    margin-left: 10%;
     background: white;
     margin: auto;
     overflow: hidden;
     padding: 10px;
     margin-bottom: 20px;
-    box-shadow: 2px 2px 2px gray;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 3px 3px 3px 3px rgba(155, 155, 155, 0.301);
     margin-top: 10px;
  
 }
+.div_title{
+    text-align: center;
+    background-color:#FFD700;
+    background-image: linear-gradient(to bottom, white, rgb(252, 252, 252), rgb(224, 224, 224), rgb(224, 224, 224));
+    border-radius: 10px 20px;
+    width: 78%;
+    margin-left: 11%;
+    color:rgb(0, 0, 0);
+    border: 1px  rgb(224, 224, 224) solid;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.527);
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 18pt;
+    font-weight: bold;
+    
+}
 #b_usuario{
-    font-size: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    
 }
 .input{
     width: 95%;
@@ -143,12 +163,18 @@ dropdown {
     width: 50px;
 }
 .nav-dropdown{
-    margin-left: 17%;
+    margin-left: 14%;
     overflow: hidden;
     float: right;
 }
+.dropbtn{
+    display: inline-flex;
+    flex-direction: row;
+    justify-items: right;
+    
+}
 .nav-dropdown .dropbtn{
-    width: 156px;
+    width: 185px;
     border: none;
     outline: none;
     background-color:#232323;
@@ -156,14 +182,14 @@ dropdown {
 .nav-dropdown .dropbtn .icon-user{
     width: 35px;
     height: 35px;
-    float: left;
+    
+    
 }
 .nav-dropdown .dropbtn .ola{
-    float: right;
     margin-top: 8px;
     color: rgb(255, 255, 255);
     font-size: 17px;
-    
+    margin-left: 5px;
 }
 
 .nav-dropdown:hover .dropbtn {

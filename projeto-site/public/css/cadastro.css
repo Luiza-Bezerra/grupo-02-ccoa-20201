@@ -23,6 +23,7 @@ select#select_filial{
     width: 224px;
 }
 .box{
+    
     width: 25%;
     padding: 10px;
     background-color: #363636;
@@ -30,8 +31,8 @@ select#select_filial{
     color: white;
     margin-left: 5%;
     float: left;
-    border-radius: 24px 60px;
-    margin-top: 60px;
+    border-radius: 24px 24px;
+    margin-top: 20px;
     margin-bottom: 100px;
 }
 .div_title{
@@ -39,21 +40,22 @@ select#select_filial{
     background-color:#FFD700;
     background-image: linear-gradient(to bottom, white, rgb(252, 252, 252), rgb(224, 224, 224), rgb(224, 224, 224));
     border-radius: 10px 20px;
-    width: 80%;
-    margin-left: 10%;
+    width: 78%;
+    margin-left: 11%;
     color:rgb(0, 0, 0);
     border: 1px  rgb(224, 224, 224) solid;
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.527);
     margin-top: 20px;
-    font-size: 20pt;
+    font-size: 18pt;
+    font-weight: bold;
     
 }
 .caixa{
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-  
+    width: 78%;
+    margin-left: 9%;
+    display: flex;
+    justify-content: center;    
 }
 .box .input{
     border:0;
