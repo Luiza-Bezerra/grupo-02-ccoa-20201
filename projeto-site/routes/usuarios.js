@@ -41,6 +41,19 @@ router.post('/autenticar', function(req, res, next) {
 /* Cadastrar usuário */
 router.post('/cadastrar', function(req, res, next) {
 	console.log('Criando um usuário');
+	 Empresa.create({
+	 	idempresa: req.body.cnpj,
+	 	nome : req.body.nomeEmpresa,
+		telefone : req.body.tel1,
+		celular : req.body.tel2
+		
+	 	}).then(resultado => {
+	 	console.log(`Registro criado:`,resultado)
+         res.send(resultado);
+     }).catch(erro => {
+	 	console.error(erro);
+	 	res.status(500).send(erro.message);
+  	 });
 	
 	Usuario.create({
 		nome : req.body.nomeRepre,
@@ -52,25 +65,13 @@ router.post('/cadastrar', function(req, res, next) {
 		senha: req.body.senha,
 		fkcnpj:req.body.cnpj
 		}).then(resultado => {
-		console.log(`Registro criado: ${resultado}`)
+		console.log(`Registro criado:`,resultado)
         res.send(resultado);
     }).catch(erro => {
 		console.error(erro);
 		res.status(500).send(erro.message);
 	  });
-	 Empresa.create({
-	 	idempresa: req.body.cnpj,
-	 	nome : req.body.nomeEmpresa,
-		telefone : req.body.tel1,
-		celular : req.body.tel2
-		
-	 	}).then(resultado => {
-	 	console.log(`Registro criado: ${resultado}`)
-         res.send(resultado);
-     }).catch(erro => {
-	 	console.error(erro);
-	 	res.status(500).send(erro.message);
-  	 });
+	
 });
 //cadastrar filial
 router.post('/filial',function(res,req,nexy){
