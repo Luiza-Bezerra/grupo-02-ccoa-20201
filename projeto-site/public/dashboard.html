@@ -89,12 +89,7 @@
 </body>
 </html>
 <script>
-	 window.onload = obterDadosGrafico;
 
-verificar_autenticacao();
-
-// neste JSON tem que ser 'labels', 'datasets' etc, 
-// porque é o padrão do Chart.js
 var dados = {
 	labels: [],
 	datasets: [
@@ -108,6 +103,14 @@ var dados = {
 		}
 	]
 };
+
+	 window.onload = obterDadosGrafico;
+
+verificar_autenticacao();
+
+// neste JSON tem que ser 'labels', 'datasets' etc, 
+// porque é o padrão do Chart.js
+
 
 
 // só mexer se quiser alterar o tempo de atualização
