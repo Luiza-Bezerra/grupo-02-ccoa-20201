@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="img/desk-lamp.png">
     <link rel="stylesheet" href="css/pacote.css">
     <link rel="icon" href="lamp.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title> Simulador Financeiro </title>
 </head>
 <body>
@@ -94,6 +96,7 @@
             </div>
     </div>
 </div>   
+<i onclick="topFunction()" id="myBtn" title="Go to top" class="fas fa-chevron-up"></i>
 
 <div class="footer">
     <div class="container-footer-left">
@@ -165,4 +168,24 @@
         resultado_economia.style.display = 'block';
         
     }
+</script>
+<script>
+    var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+   mybutton.style.display = "block";
+ } else {
+   mybutton.style.display = "none";
+ }
+}
+
+
+function topFunction() {
+ document.body.scrollTop = 0;
+ document.documentElement.scrollTop = 0;
+}
 </script>

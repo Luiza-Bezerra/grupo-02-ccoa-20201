@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/quadrados.css">
     <link rel="stylesheet" href="css/video-you.css">
     <link rel="stylesheet" href="css/recursos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Início</title>
 </head>
 <body>
@@ -210,6 +212,8 @@
                 </div>
             </div>
         </div>
+
+        <i onclick="topFunction()" id="myBtn" title="Go to top" class="fas fa-chevron-up"></i>
     
 
     </div>
@@ -240,3 +244,24 @@
       </div>
 </body>
 </html>
+
+<script>
+     var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
