@@ -96,8 +96,8 @@ var dados = {
 		{
 			yAxisID: 'y-luminosidade',
 			label: 'Luminosidade',
-			borderColor: window.chartColors.red,
-			backgroundColor: window.chartColors.red,
+			borderColor: window.chartColors.yellow,
+			backgroundColor: window.chartColors.yellow,
 			fill: false,
 			data: []
 		}
@@ -249,29 +249,30 @@ function drawAxisTickColors() {
           textStyle: {
             color: 'black',
             fontSize: 20,
-            fontName: 'Times',
+            fontName: 'Arial',
             bold: true,
           },
 		  
           titleTextStyle: {
             color: 'black',
             fontSize: 18,
-            fontName: 'Times',
+            fontName: 'Arial',
             bold: false,
-            italic: true
+            italic: false
           }
         },
         vAxis: {
           title: 'Valor em R$',
           textStyle: {
-            color: 'black',
-            fontSize: 18,
-            bold: false
+			color: 'black',
+            fontSize: 20,
+            fontName: 'Arial',
+            bold: true,
           },
 		  
           titleTextStyle: {
             color: 'black',
-			fontName: 'Times',
+			fontName: 'Arial',
             fontSize: 20,
             bold: false
           },
