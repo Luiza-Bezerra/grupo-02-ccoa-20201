@@ -50,6 +50,8 @@
         <span id="errado"></span>
     </form>
 
+<img style="display: none;" id="carregando" src="img/carregando-2.gif" alt="">
+
     <div class="footer">
       <div class="container-footer-left">
         <p>
@@ -89,6 +91,8 @@ function entrar() {
         }).then(resposta => {
             
             if (resposta.ok) {
+                carregando.style.display = "block";
+                form_login.style.opacity = 0;
 
                 resposta.json().then(json => {
 
@@ -97,7 +101,13 @@ function entrar() {
                     sessionStorage.cnpj_empresa_meuapp = json.fkCNPJ;
                     sessionStorage.senha_meuapp = json.senha;
                     
-                    window.location.href = 'dashboard.html';
+                   
+                    
+                    var delay=3000; //3 seconds
+                        setTimeout(function(){
+                            window.location.href = 'dashboard.html';
+                                //your code to be executed after 1 seconds
+                        },delay);
                 });
 
             } else {
