@@ -44,9 +44,9 @@
    
     <form class="box" action="" onsubmit="return entrar()" id="form_login" method="POST">
         <h1>Entrar</h1>
-        <input type="email" required class="input" placeholder="Email" id="em" name="emailLogin">
-        <input type="password" required type="password" class="input" placeholder="Senha" id="se" name="senhaLogin">
-        <button  class="btn" type="submit">Logar</button>
+        <input type="email" class="input" placeholder="Email" id="em" name="emailLogin" required>
+        <input type="password" type="password" class="input" placeholder="Senha" id="se" name="senhaLogin" required>
+        <button  class="btn" type="submit" onclick="logar()">Logar</button>
         <span id="errado"></span>
     </form>
 
@@ -81,6 +81,9 @@
 </html>
 <script>
  
+function logar(){
+
+}
     
 function entrar() {
       
@@ -123,7 +126,6 @@ function entrar() {
 
         return false;
     }
-
  
 </script>
 
