@@ -20,4 +20,5 @@ function enviarDuvida(){
           }
       });
 
-      return false;
+      return false
+    }
