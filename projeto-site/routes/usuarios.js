@@ -91,10 +91,10 @@ router.post('/cadastrar', function(req, res, next) {
   	 });
 	
 	Usuario.create({
+		id:req.body.cpf,
 		nome : req.body.nomeRepre,
 		email : req.body.email,
 		tipousuario: "A",
-		cpf: req.body.cpf,
 		rg: req.body.rg,
 		datanasc: req.body.dataNasc,
 		senha: req.body.senha,
@@ -113,16 +113,16 @@ router.post('/filial',function(req,res,nexy){
 	console.log('Criando filial');
 
 	Usuario.create({
+		id: req.body.cpf,
         nome : req.body.nome,
         email : req.body.email,
         tipousuario: "G",
-        cpf: req.body.cpf,
         rg: req.body.rg,
         datanasc: req.body.dataNasc,
         senha: req.body.senha,
         fkcnpj:req.body.fkCnpj
         }).then(resultado => {
-        console.log(`Registro criado: ${resultado}`)
+			console.log(`Registro criado:`,resultado)
         res.send(resultado);
     }).catch(erro => {
         console.error(erro);
@@ -136,9 +136,9 @@ router.post('/filial',function(req,res,nexy){
           cidade: req.body.cidade,
           numero: req.body.numero,
           fkcnpj: req.body.fkCnpj,
-          fkusuario: Usuario.Usuario
+          fkcpf: req.body.cpf
       }).then(resultado =>{
-          console.log(`Registro criado: ${resultado}`)
+          console.log(`Registro criado:`,resultado)
           res.send(resultado);
       }).catch(erro => {
         console.error(erro);

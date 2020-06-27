@@ -93,7 +93,7 @@
 <script>
     function cadastrar() {
 
-        if(cadastro()){
+        
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -113,12 +113,7 @@
            
             }
         });
-        }else{
-            for(var i = 0; i<erros.length;i++){
-                div_erros.innerHTML += erros[i] + '<br>';
-            }
-           
-        }
+        
         return false;
     }
 

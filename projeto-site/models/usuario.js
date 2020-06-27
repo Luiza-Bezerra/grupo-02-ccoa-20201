@@ -8,10 +8,9 @@ https://codewithhugo.com/sequelize-data-types-a-practical-guide/
 module.exports = (sequelize, DataTypes) => {
     let Usuario = sequelize.define('Usuario',{
 		id: {
-			field: 'Usuario',
+			field: 'CPF',
 			type: DataTypes.INTEGER,
-			primaryKey: true,
-			autoIncrement: true
+			primaryKey: true
 		},		
 		nome: {
 			field: 'Nome',
@@ -25,11 +24,6 @@ module.exports = (sequelize, DataTypes) => {
 		},
 		tipousuario: {
 			field: 'TipoUsu',
-			type: DataTypes.STRING,
-			allowNull: false
-		},
-		cpf: {
-			field: 'CPF',
 			type: DataTypes.STRING,
 			allowNull: false
 		},

@@ -48,9 +48,9 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false
         },
-        fkusuario: {
-			field: 'fkUsuario',
-			type: DataTypes.INTEGER,
+        fkcpf: {
+			field: 'fkCPF',
+			type: DataTypes.STRING,
 			allowNull: false
 		}
 	}, 
