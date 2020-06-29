@@ -6,7 +6,6 @@
 	<script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
 	<script type="text/javascript" src="funcoes.js"></script>
-	<link rel="stylesheet" href="css/duvidas.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<script src="duvida.js"></script>
@@ -85,14 +84,15 @@
 		</ul>
 	  </div>
 	</div>
-	<div class="duvida">
+	<div style="position: absolute;margin-left: 54.4%;
+	margin-top: 80px;width: 300px;" class="duvida">
 	<div class="lado-duvida">
-		Insira Seu Email <a href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação" 
+		<b style="font-size: 20px;margin-top: 26px;position: absolute;">Insira Seu Email:</b> <a href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação" 
 		  class="fas fa-question"></i></a> <br></div>
 		  
 		 <form method="POST"  action="" id="form_email" onsubmit="return enviarDuvida()" class="lado-duvida">
-			 <input type="text" name="email"  > <br>
-			 <input type="submit" style="cursor: pointer;" value="Receber" class="btnNov">
+			 <input placeholder="receba novidas sobre a Luminous" id="input-email-footer" type="text" name="email"  > <br>
+			 <input id="btn-email-footer" type="submit" style="cursor: pointer;" value="OK" class="btnNov">
 		 </form>
 	</div>
   </div>

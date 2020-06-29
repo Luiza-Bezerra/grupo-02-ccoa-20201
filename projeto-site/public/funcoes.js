@@ -18,7 +18,16 @@ function verificar_autenticacao() {
     if (login_usuario == undefined)  {
         redirecionar_login();
     } else {
+        if(nome_usuario.length > 8){
+            for(var c = 0;c < 8;c++){
+                if(nome_usuario[c] == ' '){
+                    break
+                }
+                b_usuario.innerHTML += nome_usuario[c];
+            }
+       }else{
         b_usuario.innerHTML = nome_usuario;
+       }
         trocarTela()
         validar_sessao();
     }
