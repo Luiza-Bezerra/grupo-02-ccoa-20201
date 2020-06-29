@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dash.css">
     <link rel="shortcut icon" href="img/desk-lamp.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script src="duvida.js"></script>
     <link rel="stylesheet" href="css/cadastro.css">
+    <script src="funcoes.js"></script>
 
     <title>Cadastro de Filial</title>
 </head>
@@ -26,12 +30,10 @@
                 <li class="nav-favoritos"><a href="filial.html" style="color:#ffd700">Cadastrar Filiais</a></li>
                 <li class="nav-dropdown">
                     <button class="dropbtn">
-                        <img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, Vinicius</span>
+                        <img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, <span id="b_usuario"></span></span>
                     </button>
                     <div class="dropdown-content">
-                        
-                        <a class="doubt" href="duvidas.html">Duvidas</a>
-                        <a class="sign-out" href="index.html">Sair</a>
+                        <a class="sign-out" href="#" onclick="logoff()">Sair</a>
                       </div>
                 </li>
             </ul>
@@ -43,13 +45,11 @@
         <span>Cadastro</span>   
     </div>
     <div class="caixa">
-    <form class="box" action="index.html">
+    <form class="box" action="" id="form_cad" onsubmit="return cadastrar()" method="POST">
         <h1>Empresa</h1>
-        <input class="input" placeholder="Cnpj">
-        <input type="text"class="input" placeholder="Nome da Empresa">
-        <input type="text"class="input" placeholder="Telefone 1">
-        <input type="text"class="input" placeholder="Telefone 2">
-        <select name="" class="select" id="select_filial">
+        <input class="input" placeholder="Cnpj" id="cn" name="fkCnpj">
+        <input type="text"class="input" placeholder="Telefone" name="telefone">
+        <select name="" class="select" id="select_filial" name="estado">
             <option value="">Selecione um estado</option>
             <option value="RO" class="option">RO</option>
             <option value="AC" class="option">AC</option>
@@ -79,31 +79,23 @@
             <option value="GO" class="option">GO</option>
             <option value="DF" class="option">DF</option>
         </select>
-        <input type="text" class="input" placeholder="Cidade">
-        <input type="text" class="input" placeholder="Bairro">
-        <input type="text" class="input" placeholder="Rua">
-        <input type="number" class="input" placeholder="Número">
-        <input type="text" class="input" placeholder="E-mail">
-        <input type="password" class="input" placeholder="Senha">
+        <input type="text" class="input" placeholder="Cidade" name="cidade">
+        <input type="text" class="input" placeholder="Bairro" name="bairro">
+        <input type="text" class="input" placeholder="Rua" name="rua">
+        <input type="number" class="input" placeholder="Número" name="numero">
+        <h1>Representante</h1>
+        <input type="text"class="input" placeholder="Nome Representante" name="nome">
+        <input class="input" placeholder="CPF" name="cpf">
+        <input type="text"class="input" placeholder="Data de Nascimento" name="dataNasc">
+        <input type="text"class="input" placeholder="RG" name="rg">
+        <input type="text"class="input" placeholder="Email" name="email">
+        <input type="password" class="input" placeholder="Senha" name="senha">
         <input type="password" class="input" placeholder="Confirmar Senha">
         <input type="password" class="input" placeholder="Senha da instituição">
-       
-    </form>
-    <form class="box" action="index.html">
-        <h1>Representante</h1>
-        <input type="text"class="input" placeholder="Nome Representante">
-        <input class="input" placeholder="CPF">
-        <input type="text"class="input" placeholder="Data de Nascimento">
-        <input type="text"class="input" placeholder="RG">
-        <input type="text"class="input" placeholder="Email">
-      
-      
-    </form>
-    <form class="box" action="dashboard.html">
-
-     
         <input type="submit" class="btn" value="Cadastrar">
+      
     </form>
+   
 </div>
     <!--<div class="div_title">
         <span>Cadastro</span>   
@@ -167,6 +159,7 @@
             então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
           </p>
         </div>
+            
         <div class="container-footer-right">
           <div class="icons">
             <ul>
@@ -177,11 +170,51 @@
             </ul>
           </div>
         </div>
+        <div style="position: absolute;margin-left: 54.4%;
+	margin-top: 80px;width: 300px;" class="duvida">
+	<div class="lado-duvida">
+		<b style="font-size: 20px;margin-top: 26px;position: absolute;">Insira Seu Email:</b> <a href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação" 
+		  class="fas fa-question"></i></a> <br></div>
+		  
+		 <form method="POST"  action="" id="form_email" onsubmit="return enviarDuvida()" class="lado-duvida">
+			 <input placeholder="receba novidas sobre a Luminous" id="input-email-footer" type="text" name="email"  > <br>
+			 <input id="btn-email-footer" type="submit" style="cursor: pointer;" value="OK" class="btnNov">
+		 </form>
+	</div>
       </div>
       <div class="footer_copyright">
         © copyright <b>Luminous</b>. All Rights Reserved. <br>
         Design by <b>Equipe de Ti da Luminous.</b>
       </div>
+
 </body>
 
 </html>
+<script>
+    verificar_autenticacao();
+    function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(form_cad));
+        fetch("/usuarios/filial", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                console.log('cadastrado com sucesso')
+                window.location.href = 'dashboard.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    
+                });
+           
+            }
+        });
+
+        return false;
+    }
+    
+</script>

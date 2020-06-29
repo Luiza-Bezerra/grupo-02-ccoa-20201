@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/conta1.css">
     <link rel="shortcut icon" href="img/desk-lamp.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script src="duvida.js"></script>
+    <script src="funcoes.js"></script>
     <link rel="stylesheet" href="css/conta-cab-fot.css">
     <title>Conta</title>
 </head>
@@ -27,12 +31,11 @@
                     <li class="nav-favoritos"><a href="filial.html">Cadastrar Filiais</a></li>
                     <li class="nav-dropdown">
                         <button class="dropbtn">
-                            <img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, Vinicius</span>
+							<img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, <span id="b_usuario"></span></span>
                         </button>
                         <div class="dropdown-content">
-                            
-                            <a class="doubt" href="duvidas.html">Duvidas</a>
-                            <a class="sign-out" href="index.html">Sair</a>
+                        
+                            <a class="sign-out" href="#" onclick="logoff()">Sair</a>
                           </div>
                     </li>
                 </ul>
@@ -353,6 +356,7 @@
                         então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
                       </p>
                     </div>
+                        
                     <div class="container-footer-right">
                       <div class="icons">
                         <ul>
@@ -363,10 +367,25 @@
                         </ul>
                       </div>
                     </div>
+                    <div style="position: absolute;margin-left: 54.4%;
+	margin-top: 80px;width: 300px;" class="duvida">
+	<div class="lado-duvida">
+		<b style="font-size: 20px;margin-top: 26px;position: absolute;">Insira Seu Email:</b> <a href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação" 
+		  class="fas fa-question"></i></a> <br></div>
+		  
+		 <form method="POST"  action="" id="form_email" onsubmit="return enviarDuvida()" class="lado-duvida">
+			 <input placeholder="receba novidas sobre a Luminous" id="input-email-footer" type="text" name="email"  > <br>
+			 <input id="btn-email-footer" type="submit" style="cursor: pointer;" value="OK" class="btnNov">
+		 </form>
+	</div>
                   </div>
                   <div class="footer_copyright">
                     © copyright <b>Luminous</b>. All Rights Reserved. <br>
                     Design by <b>Equipe de Ti da Luminous.</b>
                   </div>
+            
 </body>
 </html>
+<script>
+    verificar_autenticacao()
+</script>
