@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="img/desk-lamp.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<script src="duvida.js"></script>
+    <script src="duvida.js"></script>
+    <script src="cadastro.js"></script>
     <link rel="stylesheet" href="css/cadastro.css">
     <script src="funcoes.js"></script>
 
@@ -48,8 +49,8 @@
     <form class="box" action="" id="form_cad" onsubmit="return cadastrar()" method="POST">
         <h1>Empresa</h1>
         <input class="input" placeholder="Cnpj" id="cn" name="fkCnpj">
-        <input type="text"class="input" placeholder="Telefone" name="telefone">
-        <select name="" class="select" id="select_filial" name="estado">
+        <input type="text"class="input" placeholder="Telefone" name="telefone" required minlength="11" maxlength="11">
+        <select name="" class="select" id="select_filial" name="estado" required>
             <option value="">Selecione um estado</option>
             <option value="RO" class="option">RO</option>
             <option value="AC" class="option">AC</option>
@@ -79,19 +80,20 @@
             <option value="GO" class="option">GO</option>
             <option value="DF" class="option">DF</option>
         </select>
-        <input type="text" class="input" placeholder="Cidade" name="cidade">
-        <input type="text" class="input" placeholder="Bairro" name="bairro">
-        <input type="text" class="input" placeholder="Rua" name="rua">
-        <input type="number" class="input" placeholder="Número" name="numero">
+        <input type="text" class="input" placeholder="Cidade" name="cidade" required>
+        <input type="text" class="input" placeholder="Bairro" name="bairro" required>
+        <input type="text" class="input" placeholder="Rua" name="rua"required>
+        <input type="number" class="input" placeholder="Número" name="numero"required>
         <h1>Representante</h1>
-        <input type="text"class="input" placeholder="Nome Representante" name="nome">
-        <input class="input" placeholder="CPF" name="cpf">
-        <input type="text"class="input" placeholder="Data de Nascimento" name="dataNasc">
-        <input type="text"class="input" placeholder="RG" name="rg">
-        <input type="text"class="input" placeholder="Email" name="email">
-        <input type="password" class="input" placeholder="Senha" name="senha">
-        <input type="password" class="input" placeholder="Confirmar Senha">
-        <input type="password" class="input" placeholder="Senha da instituição">
+        <input type="text"class="input" placeholder="Nome Representante" name="nome"required>
+        <input class="input" placeholder="CPF" name="cpf"required minlength="11" maxlength="11">
+        <input type="date"class="input" placeholder="Data de Nascimento" name="dataNasc"required>
+        <input type="text"class="input" placeholder="RG" name="rg"required minlength="9" maxlength="9">
+        <input type="email"class="input" placeholder="Email" name="email" required>
+        <input type="password" class="input" id="senhaConf" minlength="5" placeholder="Senha" name="senha"required onkeyup="senhaCadastrar()">
+        <input type="password" class="input" id="conf" minlength="5" placeholder="Confirmar Senha"required onkeyup="senhaCadastrar()">
+        <input type="password" class="input" placeholder="Senha da instituição"required id="senhaIns">
+        <div id="div_erros"></div>
         <input type="submit" class="btn" value="Cadastrar">
       
     </form>

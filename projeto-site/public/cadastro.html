@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="shortcut icon" href="img/desk-lamp.png">
     <link rel="stylesheet" href="css/cadastro.css">
+    <script src="cadastro.js"></script>
 
     <title>Cadastro</title>
 </head>
@@ -57,7 +58,7 @@
         <input type="date"class="input" placeholder="Data de Nascimento" name="dataNasc" id="dataNasc" required>
         <input type="text"class="input" placeholder="RG" name="rg" id="rg" minlength="9" maxlength="9" required>
         <input type="email"class="input" placeholder="Email" name="email" id="email" required>
-        <input type="password"class="input" placeholder="Senha" name="senha" id="senha" minlength="5" required onkeyup="senhaCadastrar()">
+        <input type="password"class="input" placeholder="Senha" name="senha" id="senhaConf" minlength="5" required onkeyup="senhaCadastrar()">
         <input type="password" class="input"placeholder="Confirmar Senha" id="conf" minlength="5" required onkeyup="senhaCadastrar()">
         <div id="div_erros"></div>
         <input type="submit" class="btn" value="Cadastrar">
@@ -120,17 +121,7 @@
     }
         return false;
     }
-    function senhaCadastrar(){
-        var S = senha.value;
-        var confSenha = conf.value;
-        if(S != confSenha){
-            div_erros.innerHTML = 'senhas não coincidem'
-            return false;
-        }else{
-            div_erros.innerHTML = ''
-            return true;
-        }
-    }
+    
     
 </script>
 

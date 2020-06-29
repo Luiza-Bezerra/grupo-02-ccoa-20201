@@ -9,6 +9,7 @@ function redirecionar_login() {
 function trocarTela(){
     cnpj_empresa = sessionStorage.cnpj_empresa_meuapp;
     senha = sessionStorage.senha_meuapp;
+    senhaIns.value = senha
     cn.value =  cnpj_empresa;
 }
 function verificar_autenticacao() {
