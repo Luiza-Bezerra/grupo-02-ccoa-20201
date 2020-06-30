@@ -12,8 +12,9 @@ body{
 
 }
 .container-features-content-economic{
+    border-radius: 4px;
     background-image: url('../img/economia.png');
-    background-size: 1130px 530px;
+    background-size: 100%;
     margin-top: 40px;
     background: no-repeats;
     width: 84%;
@@ -21,25 +22,37 @@ body{
     margin-left: 6%;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.219);
 }
+.container-features-content-economic:hover{
+    background-size: 110%;
+    transition: 0.4s;
+}
 .container-features-content-graphics{
     background-image: url('../img/graphics.png');
-    background-size: 1130px 530px;
- 
+    background-size: 100%;
+    border-radius: 4px;
     background: no-repeats;
     width: 84%;
     height: 530px;
     margin-left: 6%;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.219);
 }
+.container-features-content-graphics:hover{
+    background-size: 110%;
+    transition: 0.4s;
+}
 .container-features-content-control{
     background-image: url('../img/controlar.png') ;
-    background-size: 1130px 530px;
- 
+    background-size: 100%;
+    border-radius: 4px;
     background: no-repeats;
     width: 84%;
     height: 530px;
     margin-left: 6%;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.219);
+}
+.container-features-content-control:hover{
+    background-size: 110%;
+    transition: 0.4s;
 }
 .image-features{
     float: left;
@@ -115,6 +128,7 @@ margin-top: 40px;
 }
 
 .image-check:hover{
-    border: 1px solid #FFD700;
-   
+
+    height: 60px;
+    width: 65px; 
 }
