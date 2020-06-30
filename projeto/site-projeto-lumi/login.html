@@ -42,13 +42,15 @@
         </div>
     </div>
    
-    <form class="box" action="dashboard.html" onsubmit="return logar()">
+    <form class="box" action="" onsubmit="return entrar()" id="form_login" method="POST">
         <h1>Entrar</h1>
-        <input class="input" placeholder="Email" id="em">
-        <input type="password" class="input" placeholder="Senha" id="se">
-        <button  class="btn" onclick="logar()">Logar</button>
+        <input type="email" class="input" placeholder="Email" id="em" name="emailLogin" required>
+        <input type="password" type="password" class="input" placeholder="Senha" id="se" name="senhaLogin" required>
+        <button  class="btn" type="submit" onclick="logar()">Logar</button>
         <span id="errado"></span>
     </form>
+
+<img style="display: none;" id="carregando" src="img/carregando-2.gif" alt="">
 
     <div class="footer">
       <div class="container-footer-left">
@@ -79,21 +81,53 @@
 </html>
 <script>
  
-    function logar(){
-    
-        var m = document.getElementById('em').value;
-        var p = document.getElementById('se').value;
-   if (m=="luminous@gmail.com" && p=="123456"){
-       
-        return true;
-   }
-   else{
-      errado.innerHTML = '<b style="color:red;">Email ou Senha incorretos</b>'
-    return false;
-      
-     
-   }
+function logar(){
+
 }
+    
+function entrar() {
+      
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+                carregando.style.display = "block";
+                form_login.style.opacity = 0;
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.Email;
+                    sessionStorage.nome_usuario_meuapp = json.Nome;
+                    sessionStorage.cnpj_empresa_meuapp = json.fkCNPJ;
+                    sessionStorage.senha_meuapp = json.senha;
+                    sessionStorage.cpf_usuario_meuapp = json.CPF;
+                    sessionStorage.rg_usuario_meuapp = json.RG;
+                    sessionStorage.nome_empresa_meuapp = json.Nome;
+                   
+                    
+                    var delay=3000; //3 seconds
+                        setTimeout(function(){
+                            window.location.href = 'dashboard.html';
+                                //your code to be executed after 1 seconds
+                        },delay);
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    
+                });
+            }
+        });
+
+        return false;
+    }
  
 </script>
 
