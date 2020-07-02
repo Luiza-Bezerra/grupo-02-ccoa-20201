@@ -53,7 +53,7 @@ function registrar_leitura(lumi){
 // função que retorna data e hora atual no formato aaaa-mm-dd HH:mm:ss
 function agora() {
 	const momento_atual = new Date();
-	const retorno = `${momento_atual.toLocaleDateString()} ${momento_atual.toLocaleTimeString()}`;
+	var retorno = `${momento_atual.toLocaleDateString()} ${momento_atual.toLocaleTimeString()}`;
 	console.log(`Data e hora atuais: ${retorno}`);
 	return retorno;
 }

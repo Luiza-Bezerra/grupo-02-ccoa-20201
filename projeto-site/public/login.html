@@ -86,7 +86,8 @@ function logar(){
 }
     
 function entrar() {
-      
+    carregando.style.display = "block";
+                form_login.style.opacity = 0;
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -94,8 +95,7 @@ function entrar() {
         }).then(resposta => {
             
             if (resposta.ok) {
-                carregando.style.display = "block";
-                form_login.style.opacity = 0;
+                
 
                 resposta.json().then(json => {
 
@@ -122,7 +122,10 @@ function entrar() {
             } else {
 
                 console.log('Erro de login!');
-
+                alert('Senha ou email incorreto!')
+                carregando.style.display = "none";
+                form_login.style.opacity = 1;
+                se.value = ''
                 response.text().then(texto => {
                     console.error(texto);
                     
