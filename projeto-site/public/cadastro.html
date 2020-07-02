@@ -104,12 +104,13 @@
         }).then(function (response) {
             
             if (response.ok) {
-
+                alert('Usuario Inserido com sucesso')
                 window.location.href='login.html';
 
             } else {
 
                 console.log('Erro de cadastro!');
+                alert('Erro no cadastro,verifique se as informações estao inseridas corretamente!')
                 response.text().then(function (resposta) {
                     
                 });
