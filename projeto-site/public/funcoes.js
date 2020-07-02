@@ -97,11 +97,12 @@ function verificar_autenticacao() {
     } else {
        if(nome_usuario.length > 8){
            var nome = ''
-           for(var c = 0; c < 8;c++){
-                if(nome_usuario[c] = ' '){
+           for(var c = 0; c <= nome_usuario.length;c++){
+            nome += nome_usuario[c]
+                if(nome_usuario[c] == ' '){
                     break
                 }
-                nome += nome_usuario[c]
+                
               
            }
            b_usuario.innerHTML = nome;

@@ -5,20 +5,13 @@ function enviarDuvida(){
           body: formulario
       }).then(function (response) {
           
-          if (response.ok) {
+      
 
-             alert('Agora irar Receber as Novidades da Luminous em seu email')
+             
             
 
-          } else {
-
-              console.log('Erro de cadastro!');
-              response.text().then(function (resposta) {
-                  console.log(resposta)
-              });
-         
-          }
+          
       });
-
+      alert('Agora irar Receber as Novidades da Luminous em seu email')
       return false
     }

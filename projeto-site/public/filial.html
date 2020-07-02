@@ -194,6 +194,7 @@
 </html>
 <script>
     verificar_autenticacao();
+    trocarTela();
     function cadastrar() {
         var formulario = new URLSearchParams(new FormData(form_cad));
         fetch("/usuarios/filial", {
@@ -204,6 +205,7 @@
             if (response.ok) {
 
                 console.log('cadastrado com sucesso')
+                alert('Filial cadastrada com sucesso')
                 window.location.href = 'dashboard.html';
 
             } else {

@@ -32,7 +32,7 @@ router.post('/enviarEmail',function(req,res,nexy){
             text:"Ola, Bem vindo a Luminous, agora você recebera todas as novidades e promoções da empresa atraves deste email,nosso intuito é sua confortabilidade ao usar nosso produto, afim de economizar tempo e facilitar sua vida.Obrigado por contar com a gente, Assinado:Equipe de TI Luminous!"
         }
     ).then(message =>{
-        console.log(message)
+		console.log(message)
     }).catch(err =>{
         console.log(err)
     })
