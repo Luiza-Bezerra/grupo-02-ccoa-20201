@@ -95,15 +95,22 @@ function verificar_autenticacao() {
     if (login_usuario == undefined)  {
         redirecionar_login();
     } else {
-        if(nome_usuario.length > 8){
-            for(var c = 0;c < 8;c++){
-                if(nome_usuario[c] == ' '){
+       if(nome_usuario.length > 8){
+           var nome = ''
+           for(var c = 0; c < 8;c++){
+                if(nome_usuario[c] = ' '){
                     break
                 }
-                b_usuario.innerHTML += nome_usuario[c];
-            }
+                nome += nome_usuario[c]
+              
+           }
+           b_usuario.innerHTML = nome;
+           
        }else{
-        Nome.value = nome_usuario;
+                b_usuario.innerHTML = nome_usuario;
+                console.log(nome_usuario)
+       }
+            
        }
         // trocarTela();
         validar_sessao();
@@ -111,7 +118,7 @@ function verificar_autenticacao() {
    
 
     
-}
+
 
 function logoff() {
     finalizar_sessao();
