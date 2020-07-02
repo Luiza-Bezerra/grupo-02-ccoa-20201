@@ -82,6 +82,7 @@
     cursor: pointer;
 }
 .btn-ok:hover{
+    transition: 0.4s;
     background-color: white;
     color: #FFD700;
     border: 1px solid #FFD700;
