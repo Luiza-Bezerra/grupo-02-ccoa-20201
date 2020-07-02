@@ -188,6 +188,29 @@ router.get('/sair/:login', function(req, res, next) {
 	res.send(`Sessão do usuário ${login} finalizada com sucesso!`);
 });
 
+// pegar dados da empresa
+router.get('/Empresa/:cnpj', function(req, res, next) {
+	let cnpj = req.params.cnpj;
+	var insSQL = `select * from Empresa where CNPJ = '${cnpj}'`
+	sequelize.query(insSQL,{
+		model:Empresa
+	}).then(resultado =>{
+		console.log(resultado[0].dataValues.Nome)
+		res.json(resultado[0])
+	})
+	
+});
+// pegar dados Filial
+router.post('/buscarFilial', function(req, res, next) {
+	let id = req.body.nFilial;
+	var insSQL = `select * from Filial where idFilial = '${id}'`
+	sequelize.query(insSQL,{
+		model:Filial
+	}).then(resultado =>{
+		res.json(resultado[0])
+	})
+	
+});
 
 /* Recuperar todos os usuários */
 router.get('/', function(req, res, next) {

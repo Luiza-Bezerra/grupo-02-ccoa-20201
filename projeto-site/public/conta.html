@@ -52,7 +52,7 @@
                         <span>Nome*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="text" value="Vinicius de Carvalho">
+                        <input type="text" id="Nome">
                     </div>
                 </div>
             
@@ -61,7 +61,7 @@
                         <span>CPF*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="text" value="264.***.***-63">
+                        <input type="text" id="CPF">
                     </div>
                 </div>
             
@@ -70,7 +70,7 @@
                         <span>Data de Nascimento*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="date" >
+                        <input type="text" id="DN">
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                         <span>RG*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="text" value="44.133.444-1">
+                        <input type="text" id="RG">
                     </div>
                 </div>
             
@@ -89,7 +89,7 @@
                         <span>Email*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="email" value="viniciusbastos@gmail.com">
+                        <input type="email" id="LG">
                     </div>
                 </div>
             
@@ -98,7 +98,7 @@
                         <span>Senha*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="password" value="12345678">
+                        <input type="password" id="SE">
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                         <span>CNPJ*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="text" value="00.378.257/0001-81">
+                        <input type="text" id="cn">
                     </div>
                 </div>
             
@@ -125,7 +125,7 @@
                         <span>Nome da Empresa*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="text" value="Luminous e Cia">
+                        <input type="text" id="NE">
                     </div>
                 </div>
             
@@ -134,7 +134,7 @@
                         <span>Telefone*</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="tel" value="(11) 9 73113353">
+                        <input type="text" id="TELEMPRESA">
                     </div>
                 </div>
                 
@@ -145,7 +145,7 @@
                         <span>Telefone(opcional)</span>
                     </div>
                     <div class="input-resultado">
-                        <input type="tek" value="(11) 9 40028922">
+                        <input type="tek" id="TELEMPRESA2">
                     </div>
                 </div> 
             </div>
@@ -159,7 +159,9 @@
                        <span>N° da Filial*</span>
                    </div>
                    <div class="input-resultado">
-                       <input type="number" value="3">
+                       <form action="" method="POST" id="Form_bFilial" onsubmit="return buscarFilial()">
+                       <input type="number" value="3" name="nFilial" > <button type="submit" class="btn-ok">Pesquisar</button>
+                    </form>
                    </div>
                </div>
            
@@ -168,7 +170,7 @@
                        <span>Representante(CPF)*</span>
                    </div>
                    <div class="input-resultado">
-                       <input type="text" value="264.***.***-63">
+                       <input type="text" id="CPFFILIAL">
                    </div>
                </div>
            
@@ -177,82 +179,23 @@
                        <span>Telefone*</span>
                    </div>
                    <div class="input-resultado">
-                       <input type="tel" value="(11) 9 45698752">
+                       <input type="tel"  id="TELFILIAL">
                    </div>
                </div>
-           </div>
-           <div class="linha">
-            <div class="dados">
-                <div class="dados-title">
-                    <span>Telefone</span>
-                </div>
-                <div class="input-resultado">
-                    <input type="tel" value="(11) 9 47829715">
-                </div>
-            </div>
+           
+           
         
-            <div class="dados">
-                <div class="dados-title">
-                    <span>CEP</span>
-                </div>
-                <div class="input-resultado-cep">
-                    <input type="text" value="09540-630">
-                </div>
-            </div>
-        
-            <div class="dados-cep">
-                <button class="btn-ok"> OK</button>
-            </div>
-            <div class="dados-cep">
-                <div class="correios">
-                    <span><a target="_blank" class="link-correios" href="http://www.buscacep.correios.com.br/sistemas/buscacep/">Não sei meu CEP</a></span>
-                </div>
-            </div>
-            <div class="dados-uf">
-                <div class="estado">
-                    <select  name="estado" id="fisica-estado">
-                        <option disabled>UF</option>
-                                <option value="AC" disabled>AC</option>
-                                <option value="AL" disabled>AL</option>
-                                <option value="AM" disabled>AM</option>
-                                <option value="AM" disabled>AM</option>
-                                <option value="AP" disabled>AP</option>
-                                <option value="BA" disabled>BA</option>
-                                <option value="CE" disabled>CE</option>
-                                <option value="DF" disabled>DF</option>
-                                <option value="DF" disabled>DF</option>
-                                <option value="ES" disabled>ES</option>
-                                <option value="GO" disabled>GO</option>
-                                <option value="GO" disabled>GO</option>
-                                <option value="MA" disabled>MA</option>
-                                <option value="MG" disabled>MG</option>
-                                <option value="MS" disabled>MS</option>
-                                <option value="MT" disabled>MT</option>
-                                <option value="PA" disabled>PA</option>
-                                <option value="PB" disabled>PB</option>
-                                <option value="PE" disabled>PE</option>
-                                <option value="PI" disabled>PI</option>
-                                <option value="PR" disabled>PR</option>
-                                <option value="RJ" disabled>RJ</option>
-                                <option value="RN" disabled>RN</option>
-                                <option value="RR" disabled>RR</option>
-                                <option value="RO" disabled>RO</option>
-                                <option value="RS" disabled>RS</option>
-                                <option value="SC" disabled>SC</option>
-                                <option value="SE" disabled>SE</option>
-                                <option value="SP" selected>SP</option>
-                                <option value="TO" disabled>TO</option>
-                    </select>
-                </div>
-            </div>
+            
+            
         </div>
         <div class="linha">
+            
             <div class="dados">
                 <div class="dados-title">
                     <span>Cidade*</span>
                 </div>
                 <div class="input-resultado">
-                    <input type="text" value="São Caetano do Sul">
+                    <input type="text" id="CIDFILIAL">
                 </div>
             </div>
         
@@ -261,7 +204,7 @@
                     <span>Bairro*</span>
                 </div>
                 <div class="input-resultado">
-                    <input type="text" value="Olímpico">
+                    <input type="text" id="BAIFILIAL">
                 </div>
             </div>
         
@@ -270,7 +213,44 @@
                     <span>Rua*</span>
                 </div>
                 <div class="input-resultado">
-                    <input type="tel" value="Pindorama">
+                    <input type="text" id="RUAFILIAL">
+                </div>
+            </div>
+            <div class="dados-uf">
+                <div class="estado">
+                    <select  name="estado" id="FE">
+                        <option>UF</option>
+                                <option value="AC" >AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AM">AM</option>
+
+                                <option value="AP">AP</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                               
+                                <option value="ES">ES</option>
+                                <option value="GO" >GO</option>
+                               
+                                <option value="MA" >MA</option>
+                                <option value="MG" >MG</option>
+                                <option value="MS" >MS</option>
+                                <option value="MT" >MT</option>
+                                <option value="PA" >PA</option>
+                                <option value="PB" >PB</option>
+                                <option value="PE" >PE</option>
+                                <option value="PI" >PI</option>
+                                <option value="PR" >PR</option>
+                                <option value="RJ" >RJ</option>
+                                <option value="RN" >RN</option>
+                                <option value="RR" >RR</option>
+                                <option value="RO" >RO</option>
+                                <option value="RS" >RS</option>
+                                <option value="SC" >SC</option>
+                                <option value="SE" >SE</option>
+                                <option value="sp" >SP</option>
+                                <option value="TO" >TO</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -280,7 +260,7 @@
                     <span>Número*</span>
                 </div>
                 <div class="input-resultado">
-                    <input type="tel" value="(11) 9 34565492">
+                    <input type="text" id="NUMFILIAL">
                 </div>
             </div>
         
@@ -304,48 +284,6 @@
         </div>
         </div>
     </div>
-        
-        
-    <!--<select class="estado" name="estado" id="fisica-estado">
-                    <option disabled>UF</option>
-                            <option value="AC" disabled>AC</option>
-                            <option value="AL" disabled>AL</option>
-                            <option value="AM" disabled>AM</option>
-                            <option value="AM" disabled>AM</option>
-                            <option value="AP" disabled>AP</option>
-                            <option value="BA" disabled>BA</option>
-                            <option value="CE" disabled>CE</option>
-                            <option value="DF" disabled>DF</option>
-                            <option value="DF" disabled>DF</option>
-                            <option value="ES" disabled>ES</option>
-                            <option value="GO" disabled>GO</option>
-                            <option value="GO" disabled>GO</option>
-                            <option value="MA" disabled>MA</option>
-                            <option value="MG" disabled>MG</option>
-                            <option value="MS" disabled>MS</option>
-                            <option value="MT" disabled>MT</option>
-                            <option value="PA" disabled>PA</option>
-                            <option value="PB" disabled>PB</option>
-                            <option value="PE" disabled>PE</option>
-                            <option value="PI" disabled>PI</option>
-                            <option value="PR" disabled>PR</option>
-                            <option value="RJ" disabled>RJ</option>
-                            <option value="RN" disabled>RN</option>
-                            <option value="RR" disabled>RR</option>
-                            <option value="RO" disabled>RO</option>
-                            <option value="RS" disabled>RS</option>
-                            <option value="SC" disabled>SC</option>
-                            <option value="SE" disabled>SE</option>
-                            <option value="SP" selected>SP</option>
-                            <option value="TO" disabled>TO</option>
-                </select>-->
-    
-
-    
-
-
-
-    
                 <div class="footer">
                     <div class="container-footer-left">
                       <p>
@@ -368,8 +306,8 @@
                       </div>
                     </div>
                     <div style="position: absolute;margin-left: 54.4%;
-	margin-top: 80px;width: 300px;" class="duvida">
-	<div class="lado-duvida">
+                    margin-top: 80px;width: 300px;" class="duvida">
+                    <div class="lado-duvida">
 		<b style="font-size: 20px;margin-top: 26px;position: absolute;">Insira Seu Email:</b> <a href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação" 
 		  class="fas fa-question"></i></a> <br></div>
 		  
@@ -388,4 +326,7 @@
 </html>
 <script>
     verificar_autenticacao()
+    ContaDados()
+    buscarEmpresa()
+    
 </script>
