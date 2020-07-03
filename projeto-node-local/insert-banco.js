@@ -34,7 +34,7 @@ function registrar_leitura(lumi){
 
         return banco.sql.query(`
         INSERT into Eventos (GrauLum, DataEvento,fkSensor)
-        values (${lumi}, CONVERT(Datetime, '${agora()}', 120),1);`)
+        values (${lumi}, CONVERT(Datetime, '${agora()}', 120),2);`)
         .then(() => {
             console.log('Registro inserido com sucesso!');
         });
