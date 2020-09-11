@@ -1,0 +1,4 @@
+pip install psutil
+pip install virtualenv
+pip install mysql-connector-python
+pip3 install mysql-connector
