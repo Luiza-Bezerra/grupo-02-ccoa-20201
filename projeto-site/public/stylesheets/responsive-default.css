@@ -1,0 +1,32 @@
+/* SMARTPHONE */
+@media screen and (max-width: 425px) {
+  .container {
+    width: 90vw;
+  }
+  header {
+    width: 100%;
+  }
+  header .title-header img {
+    width: 6vw;
+  }
+  .title-header h1,
+  .title-header span {
+    font-size: 16px;
+  }
+
+  header nav,
+  header nav ul {
+    display: none;
+  }
+
+  footer{
+      padding:15px 0;
+  }
+  .text-footer, .text-footer span{
+    font-size: 0.7rem;
+  }
+}
+/*TABLET*/
+@media screen and (max-width: 900px) and (min-width: 600px) {
+ /* para tablets */
+}
