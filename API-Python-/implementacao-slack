@@ -1,0 +1,58 @@
+-- no site do slack -- 
+1º criar servidor no slack (criado com a conta do grupo)
+2º ir no slack api (com a conta q criou o servidor)
+3º criar um app [bot]e associar ao servidor
+4º ir na aba  webhooks e ativar
+5º associar o webhook ao canal dentro do servidor
+6º permitir que o bot envie mensagens
+7º copiar a URL do webhook
+
+- em python -
+1º entrar no arquivo dataGenerator.py 
+2° criar um função (def) em pyhon para guardar a string que o bot vai mandar no slack.
+[
+no inicio do aquivo colocar :
+import requests
+depois do def getData colocar:
+
+def alertas(values):
+    if(values[0]>0):
+        condicao =''
+
+        if(values[0] >= 0):
+            condicao += 'alto uso de CPU. \n' 
+        if(values[1]>=0):
+            condicao += 'alto uso de RAM. \n' 
+
+        condicao = condicao[0:-2] + '.'
+        pload = {'text': condicao}
+        url=#pegar a url do webhoock do slack e colocar aqui
+        requests.post(url, json = pload)
+        print('pload=',pload)
+
+        return condicao
+    else:
+        return print('hardware ok')
+
+
+if __name__ == '__main__':
+    while True:
+        valores = getData()
+        condicoes = alertas(valores)
+        print(condicoes)
+
+]
+
+3° adiconar no main.py 
+[
+	no inicio do arquivo:
+
+from services.dataGenerator import alertas
+adicionar o while:
+
+    alerts = alertas(values)
+    print(alertas)
+]
+
+4º importar lib 
+pip install requests
