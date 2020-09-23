@@ -41,15 +41,12 @@ footer {
   background-color: var(--color-black);
   padding: 10px 0px;
   box-shadow: 2px 2px 10px #00000090;
-}
-header {
-  height: 5vh;
+  height: 6vh;
 }
 footer {
   bottom: 0;
   position: relative;
   text-align: center;
-  height: 5vh;
 }
 
 nav,
@@ -67,7 +64,7 @@ nav a {
   font-size: 12px;
 }
 header .title-header img {
-  width: 1.9vw;
+  width: 2vw;
   margin: 0px 10px;
   display: block;
 }
@@ -106,6 +103,19 @@ nav li a:hover {
 }
 .margin-30-y{
   margin:30px auto;
+}
+
+.social{
+  margin:5px;
+}
+
+.social-link{
+  text-decoration: none;
+  color:var(--color-yellow);
+  margin:2pt;
+}
+.social-link:hover{
+  color: var(--color-light-gray);
 }
 
 /*  CLASSE PARA DAR TAMANHO AO MAIN -
