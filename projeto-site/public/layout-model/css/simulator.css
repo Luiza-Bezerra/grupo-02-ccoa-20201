@@ -1,12 +1,16 @@
+/* Pagina Simulador */
+
 body {
     background-color: #f1f1f1;
 }
 
-.t-height{
-    height: 78vh;
+.alt_tela{
+    height: 70vh;
   }
 
-main {
+#box_simulador {
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     background: rgba(35, 35, 35, 0.6);
     border-radius: 50px;
@@ -17,7 +21,7 @@ header {
     margin-bottom: 50px;
 }
 
-main h2 {
+#box_simulador h2 {
     color: black;
     font-weight: bolder;
     font-size: 40px;
@@ -25,7 +29,7 @@ main h2 {
     margin-top: 2%;
 }
 
-main input, select {
+#box_simulador input, select {
     text-align: center;
     text-align-last: center;
     margin-bottom: 20px;
@@ -63,7 +67,7 @@ input[type=number] {
     float: left;
 }
 
-main h3 {
+#box_simulador h3 {
     text-transform: uppercase;
     font-size: 25px;
     margin-top: 5%;
