@@ -1,143 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="shortcut icon" href="img/desk-lamp.png">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/logotipo.png">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/responsive-default.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Acessar - Luminous</title>
 
-    <title>Login</title>
 </head>
-<body>
-  
-    <div class="header">
-        <div class="container">
+
+<body class="banner-f">
+
+    <header>
+        <nav class="container middle">
             <div class="title-header">
-                <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
+                <img src="img/logotipo.png" alt="logotipo Luminous - lampada">
+                <h1 class="highlight"> Lumi<span>nous</span></h1>
             </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="index.html" >Início</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="simulador.html">Simulador</a></li>
-                    <li><a href="pacotes.html" >Pacotes</a></li>
-                   
-                   
-                  
-                </ul>
-               
-              
-              
-            </div>
+            <ul>
+                <li><a href="index.html" class="current">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="pacotes.html">Pacotes</a></li>
+
+            </ul>
             <div class="nav-end">
                 <ul>
-                    <li class="l2" ><a href="cadastro.html"> Cadastrar</a></li>
-                    <li class="l2"><a href="login.html"><span id="l3">Entrar</span></a></li>
+                    <li class="l2"><a href="cadastro.html">Cadastrar</a></li>
+                    <li class="l2"><a href="login.html"> Entrar</a></li>
                 </ul>
-               
-              
-              
             </div>
-        </div>
-    </div>
-   
-    <form class="box" action="" onsubmit="return entrar()" id="form_login" method="POST">
-        <h1>Entrar</h1>
-        <input type="email" class="input" placeholder="Email" id="em" name="emailLogin" required>
-        <input type="password" type="password" class="input" placeholder="Senha" id="se" name="senhaLogin" required>
-        <button  class="btn" type="submit" onclick="logar()">Logar</button>
-        <span id="errado"></span>
-    </form>
+        </nav>
+        <span class="mobile-menu">X</span>
+    </header>
+    <!-- DENTRO DA TAG MAIN - COLOCAR O CONTEÚDO DA PÁGINA -->
+    <main class="container margin-30-y">
+        <form class="box" action="" onsubmit="return entrar()" id="form_login" method="POST">
+            <div class="login">
+                <span class="titulo_form">
+                    <span class="bubble-ico">
+                        <i class="fas fa-sign-in-alt icon-title"></i>
+                    </span>
+                    .Acesso ao Luminous
+                </span>
+                <label for="em">
+                    <i class="fas fa-user"></i>
+                    <input type="email" class="input" placeholder="Email" id="em" name="emailLogin" required>
+                </label>
+                <label for="se">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" type="password" class="input" placeholder="Senha" id="se" name="senhaLogin"
+                        required>
+                </label>
+                <button class="btn" type="submit" onclick="logar()">Logar</button>
+                <span id="errado"></span>
+                <div class="links">
+                    <a class="link_form" href="">
+                        Esqueceu a Senha?
+                    </a>
+                    <a class="link_form" href="">Cadastre-se</a>
+                </div>
+            </div>
+        </form>
+    </main>
 
-<img style="display: none;" id="carregando" src="img/carregando-2.gif" alt="">
-
-    <div class="footer">
-      <div class="container-footer-left">
-        <p>
-          <h2>Sobre a Luminous</h2>
-        </p>
-        <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica,
-          percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz,
-          então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
-        </p>
-      </div>
-      <div class="container-footer-right">
-        <div class="icons">
-          <ul>
-            <a target="_blank" href="https://www.instagram.com/empresa_luminous/"><li> <img src="img/instagram.png" class="logo" alt=""> </li></a>
-            <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour"><li><img src="img/facebook.png" class="logo" alt=""></li></a>
-            <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-"><li><img src="img/github.png" class="logo" alt=""></li></a>
-            <a target="_blank" href=""><li><img src="img/linkedin.png" class="logo" alt=""></li></a>
-          </ul>
+    <footer>
+        <div class="text-footer">
+            <span class="highlight">&copy;2020</span> - Desenvolvido com <span class="highlight">❤</span> pela
+            equipe <span class="highlight">Luminous</span>.
         </div>
-      </div>
-    </div>
-    <div class="footer_copyright">
-      © copyright <b>Luminous</b>. All Rights Reserved. <br>
-      Design by <b>Equipe de Ti da Luminous.</b>
-    </div>
+        <div class="social">
+
+            <a href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour" target="_blank"
+                rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://www.instagram.com/empresa_luminous/" target="_blank" rel="noopener noreferrer"
+                class="social-link">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/BandTec/grupo-02-ccoa-20201" target="_blank" rel="noopener noreferrer"
+                class="social-link">
+                <i class="fab fa-github-square"></i>
+            </a>
+
+        </div>
+    </footer>
+    <!-- Link fontawesome-->
+    <script src="https://kit.fontawesome.com/29db2d61c6.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
-<script>
- 
-function logar(){
-
-}
-    
-function entrar() {
-    carregando.style.display = "block";
-                form_login.style.opacity = 0;
-        var formulario = new URLSearchParams(new FormData(form_login));
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            body: formulario
-        }).then(resposta => {
-            
-            if (resposta.ok) {
-                
-
-                resposta.json().then(json => {
-
-                    sessionStorage.login_usuario_meuapp = json.Email;
-                    sessionStorage.nome_usuario_meuapp = json.Nome;
-                    sessionStorage.cnpj_empresa_meuapp = json.fkCNPJ;
-                    sessionStorage.senha_meuapp = json.senha;
-                    sessionStorage.cpf_usuario_meuapp = json.CPF;
-                    sessionStorage.rg_usuario_meuapp = json.RG;
-                    sessionStorage.datanasc_usuario_meuapp = json.DataNasc
-                
-                   
-                    
-                    
-                   
-                    
-                    var delay=3000; //3 seconds
-                        setTimeout(function(){
-                            window.location.href = 'dashboard.html';
-                                //your code to be executed after 1 seconds
-                        },delay);
-                });
-
-            } else {
-
-                console.log('Erro de login!');
-                alert('Senha ou email incorreto!')
-                carregando.style.display = "none";
-                form_login.style.opacity = 1;
-                se.value = ''
-                response.text().then(texto => {
-                    console.error(texto);
-                    
-                });
-            }
-        });
-
-        return false;
-    }
- 
-</script>
-
-
-
-  

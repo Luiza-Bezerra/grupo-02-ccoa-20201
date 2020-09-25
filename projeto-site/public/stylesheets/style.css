@@ -4,6 +4,7 @@
   /* VARIAVEIS EM CSS */
   --color-black: #232323;
   --color-yellow: #deca5d;
+  --color-yellow-t: #decb5dde;
   --color-light-gray: #f5f5f5;
   /*
         PARA UTILIZAR AS VARIAVEIS COLOQUE A PROPRIEDADE E
@@ -27,7 +28,7 @@
 .container {
   width: 80vw;
   margin: auto;
-  color: var( --color-light-gray);
+  color: var(--color-light-gray);
 }
 body {
   background-color: #414141de;
@@ -41,11 +42,11 @@ footer {
   background-color: var(--color-black);
   padding: 10px 0px;
   box-shadow: 2px 2px 10px #00000090;
-  height: 6vh;
+  height: 6.5vh;
 }
 footer {
   bottom: 0;
-  position: relative;
+  position: absolute;
   text-align: center;
 }
 
@@ -76,7 +77,8 @@ header .title-header img {
 nav li {
   padding: 0px 20px;
 }
-.title-header h1, .title-header span {
+.title-header h1,
+.title-header span {
   font-family: 'alata';
   font-size: 30px;
   letter-spacing: 1.7pt;
@@ -85,10 +87,10 @@ nav li {
 .highlight {
   color: var(--color-yellow);
 }
-.title-header span{
-  padding:0;
+.title-header span {
+  padding: 0;
   margin: 0;
-  color:var(--color-light-gray)
+  color: var(--color-light-gray);
 }
 .current,
 nav li a:hover {
@@ -101,30 +103,132 @@ nav li a:hover {
   display: flex;
   align-items: center;
 }
-.margin-30-y{
-  margin:30px auto;
+.margin-30-y {
+  margin: 30px auto;
 }
 
-.social{
-  margin:5px;
+.social {
+  margin: 5px;
 }
 
-.social-link{
+.social-link {
   text-decoration: none;
-  color:var(--color-yellow);
-  margin:2pt;
+  color: var(--color-yellow);
+  margin: 2pt;
 }
-.social-link:hover{
+.social-link:hover {
   color: var(--color-light-gray);
 }
 
 /*  CLASSE PARA DAR TAMANHO AO MAIN -
     QUANDO O CONTEÚDO NÃO FOR O SUFICIENTE
 */
-.t-height{
+.t-height {
   height: 100vh;
 }
 
-.mobile-menu{
-  display:none;
+.mobile-menu {
+  display: none;
+}
+
+/* CADASTRO */
+fieldset,
+.login {
+  border: 0;
+  width: 30%;
+  background: #232323ea;
+  margin: 20px auto;
+  padding: 30px 20px;
+  height: 65vh;
+}
+
+form {
+  display: flex;
+  text-align: center;
+}
+
+.input,
+.links {
+  background: transparent;
+  border: 0;
+  width: 100%;
+  height: 10%;  
+  color: var(--color-yellow);
+  margin:5px auto;
+}
+.links{  
+  display: flex;
+  flex-direction: column;
+}
+label[for="em"],
+label[for="se"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px var(--color-yellow)solid;
+  color: var(--color-yellow);
+  margin: 30px auto;
+}
+.b-line-bottom{
+  border-bottom: 1px var(--color-yellow)solid;
+}
+label[for="em"] i,
+label[for="se"] i {
+  margin: 0 10px 0 5px; /*top rigth bottom left*/
+}
+
+.btn {
+  border: 0;
+  background: var(--color-yellow);
+  padding: 10px;
+  width: 100%;
+  margin: 30px auto;
+  cursor: pointer;
+}
+.banner-f{
+  background-image: url("../img/banner-login-cadastro.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titulo_form {
+  color: var(--color-yellow);
+  font-size: 20px;
+  margin: 25px auto;
+  text-align: center;
+}
+.link_form {
+  width: 100%;
+  margin: 20px 10px;
+  text-decoration: none;
+  color: var(--color-light-gray);
+}
+.links {
+  border: 0;
+}
+form .icon-title {
+  color: var(--color-light-gray);
+  font-size: 22px;
+}
+.bubble-ico {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  padding: 5pt;
+  margin: 0 10px 0 0;
+  border-radius: 100%;
+  background-color: var(--color-yellow-t);
+}
+input[type="date"]
+{  width: 100%;
+  -moz-appearance: none;
+  appearance: none;
+  color: #636464;
+}
+
+input[type="date"]:focus{  
+  color: var(--color-yellow-t);
 }
