@@ -1,191 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="shortcut icon" href="img/desk-lamp.png">
-    <link rel="stylesheet" href="css/pacote.css">
-    <link rel="icon" href="lamp.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="../img/logotipo.png">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/responsive-default.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title> Simulador Financeiro </title>
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/simulator.css">
+    <script src="js/simulador.js"></script>
+    <title>Simulador</title>
+
 </head>
+
 <body>
-        <div class="header">
-                <div class="container">
-                    <div class="title-header">
-                        <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
-                    </div>
-                    <div class="nav">
-                        <ul>
-                            <li><a href="index.html" >Início</a></li>
-                            <li><a href="sobre.html">Sobre Nós</a></li>
-                            <li><a href="simulador.html" class="current">Simulador</a></li>
-                            <li><a href="pacotes.html" >Pacotes</a></li>
-                            
-                           
-                          
 
-                        </ul>
+    <header>
+        <nav class="container middle">
+            <div class="title-header">
+                <img src="img/logotipo.png" alt="logotipo Luminous - lampada">
+                <h1 class="highlight"> Lumi<span>nous</span></h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="simulador.html" class="current">Simulador</a></li>
+                <li><a href="pacotes.html">Pacotes</a></li>
+
+            </ul>
+            <div class="nav-end">
+                <ul>
+                    <li class="l2"><a href="cadastro.html">Cadastrar</a></li>
+                    <li class="l2"><a href="login.html"> Entrar</a></li>
+                </ul>
+            </div>
+        </nav>
+        <span class="mobile-menu">X</span>
+    </header>
+    <!-- DENTRO DA TAG MAIN - COLOCAR O CONTEÚDO DA PÁGINA -->
+    <main class="container margin-30-y alt_tela">
+        <div id="box_simulador">
+            <h2>SIMULADOR</h2>
+    
+            <div id="esquerda">
+                <h3> Dados de Consumo </h3>
+                <br>
+                <select id="lampada" class="con">
+                    <option value=""> Escolha um tipo de Lâmpada </option>
+                    <option value="8"> Lâmpada LED tubular(8 watts) </option>
+                    <option value="11"> Lâmpada LED tubular(11 watts) </option>
+                    <option value="15"> Lâmpada LED tubular(15 watts) </option>
+                    <option value="23"> Lâmpada LED tubular(23 watts) </option>
+                    <option value="40"> Lâmpada LED tubular(40 watts) </option>
+                    <option value="8"> Lâmpada LED (8 watts) </option>
+                    <option value="11"> Lâmpada LED(11 watts) </option>
+                    <option value="15"> Lâmpada LED(15 watts) </option>
+                    <option value="23"> Lâmpada LED(23 watts) </option>
+                    <option value="40"> Lâmpada LED(40 watts) </option>
+                </select>
+                <input type="number" id="qtd_lamp" class="con" placeholder="Quantidade de Lâmpadas">
+                <input type="number" id="horas" class="con" placeholder="Consumo médio diário em horas">
+                <input type="number" id="dias" class="con" placeholder=" Quantidade de dias ao mês">
+    
+    
+                <button onclick="gastos_lamp()"> Calcular </button>
+            </div>
+    
+            <div id="linha">
+    
+            </div>
+    
+            <div id="direita">
+                <h3>Resultado</h3>
+    
+                <div id="esquerda2">
+                    <div id="result">
+                        <strong> Consumo: <strong id="b_consumo"> </strong> </strong>
+                        <br>
+                        <strong> Custo por mês: <strong id="despesa_mes"></strong>
+                        </strong>
+                        <br>
+                        <strong> Custo por ano: <strong id="despesa_ano"></strong>
+                        </strong>
+    
+                        <br>
+                        <br>
+    
+                        <strong>Tarifa utilizada:</strong> <strong style="color: #deca5d;"> Enel </strong>
                     </div>
-                    <div class="nav-end">
-                        <ul>
-                            <li class="l2"><a href="cadastro.html">Cadastrar</a></li>
-                            <li class="l2"><a href="login.html">Entrar</a></li>
-                        </ul>
-                        
+    
+                </div>
+    
+                <div id="linha2">
+    
+                </div>
+    
+                <div id="direita2">
+                    <div id="resultado_economia">
+                        <strong> Consumo: <strong id="b_consumo2"> </strong> </strong>
+                        <br>
+                        <strong> Custo por mês: <strong id="despesa_mes2"> </strong>
+                        </strong>
+                        <br>
+                        <strong> Custo por ano: <strong id="despesa_ano2"></strong>
+                        </strong>
+                        <br>
+                        <br>
+                        <strong> Economia ao ano: <strong id="valor_economizado"> </strong> </strong>
                     </div>
                 </div>
+    
+                <input id="novas_horas" placeholder="Novo consumo médio diário em horas">
+                <button onclick="calcularEconomia()">Calcular Economia</button>
+    
             </div>
 
+        </div>
 
-   
-       
-     <div class="caixa">
-    <div class="box">
-        <h1> Calculo de gastos com iluminação </h1>
-            <h3> Simulador </h3>
-            <select id="lampada" class="con">
-                <option value="">  Escolha um tipo de Lâmpada </option>
-                <option value="8"> Lâmpada LED tubular(8 watts) </option>
-                <option value="11"> Lâmpada LED tubular(11 watts) </option>
-                <option value="15"> Lâmpada LED tubular(15 watts) </option>
-                <option value="23"> Lâmpada LED tubular(23 watts) </option>
-                <option value="40"> Lâmpada LED tubular(40 watts) </option>
-                <option value="8"> Lâmpada LED (8 watts) </option>
-                <option value="11"> Lâmpada LED(11 watts) </option>
-                <option value="15"> Lâmpada LED(15 watts) </option>
-                <option value="23"> Lâmpada LED(23 watts) </option>
-                <option value="40"> Lâmpada LED(40 watts) </option>
-            </select>
-            <input type="number" id="qtd_lamp" class="con" placeholder="Quantidade de Lâmpadas">
-            <input type="number" id="horas"  class="con" placeholder="Consumo médio diário em horas"> 
-            <input type="number" id="dias"  class="con" placeholder=" Quantidade de dias ao mês">
-           
-     
-            <button onclick="gastos_lamp()" class="btn"> Calcular </button>
-            <br>
+    </main>
+
+    <footer>
+        <div class="text-footer">
+            <span class="highlight">&copy;2020</span> - Desenvolvido com <span class="highlight">❤</span> pela
+            equipe  <span class="highlight">Luminous</span>.
+        </div>
+        <div class="social">
         
-            <div id="result" style="display: none;">
-                <br><br>
-                <b> Consumo: <b id="b_consumo" style="color: rgb(255, 230, 87);"> </b> </b>
-                <br>
-                <b> Custo por mês: <b id="despesa_mes" style="color: rgb(255, 212, 212);"></b> </b>
-                <br>
-                <b> Custo por ano: <b id="despesa_ano" style="color: rgb(255, 77, 255);"></b> </b>
+          <a href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour" target="_blank" rel="noopener noreferrer" class="social-link">
+            <em class="fab fa-facebook-square"></em>
+            </a>
+          <a href="https://www.instagram.com/empresa_luminous/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <em class="fab fa-instagram-square"></em>
+            </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer" class="social-link">
+            <em class="fab fa-linkedin"></em>
+            </a>
+          <a href="https://github.com/BandTec/grupo-02-ccoa-20201" target="_blank" rel="noopener noreferrer" class="social-link">
+            <em class="fab fa-github-square"></em>
+            </a>
+        
+        </div>
+    </footer>
+    <!-- Link fontawesome-->
+    <script src="https://kit.fontawesome.com/29db2d61c6.js" crossorigin="anonymous"></script>
 
-                <br>
-                <br>
-
-                <b>Tarifa utilizada:</b> <b style="color: gold;"> Enel </b>  
-                <br>
-                <br>
-
-                <input id="novas_horas" class="con" placeholder="Novo consumo médio diário em horas">
-                <button onclick="calcularEconomia()" class="btn">Calcular Economia</button>
-                <div id="resultado_economia" style="display: none;">
-                    <b> Consumo: <b id="b_consumo2" style="color: rgb(30, 30, 58);"> </b> </b>
-                    <br>
-                    <b> Custo por mês: <b id="despesa_mes2" style="color: rgb(233, 220, 220);"> </b> </b>
-                    <br>
-                    <b> Custo por ano: <b id="despesa_ano2" style="color: rgb(255, 112, 255);"></b> </b>
-                    <br>
-                    <b> Valor economizado no ano: <b id="valor_economizado" style="color: rgb(130, 223, 130);"></b> </b>
-                </div>
-            </div>
-    </div>
-</div>   
-<i onclick="topFunction()" id="myBtn" title="Go to top" class="fas fa-chevron-up"></i>
-
-<div class="footer">
-    <div class="container-footer-left">
-      <p>
-        <h2>Sobre a Luminous</h2>
-      </p>
-      <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica,
-        percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz,
-        então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
-      </p>
-    </div>
-    <div class="container-footer-right">
-      <div class="icons">
-        <ul>
-          <a target="_blank" href="https://www.instagram.com/empresa_luminous/"><li> <img src="img/instagram.png" class="logo" alt=""> </li></a>
-          <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour"><li><img src="img/facebook.png" class="logo" alt=""></li></a>
-          <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-"><li><img src="img/github.png" class="logo" alt=""></li></a>
-          <a target="_blank" href=""><li><img src="img/linkedin.png" class="logo" alt=""></li></a>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer_copyright">
-    © copyright <b>Luminous</b>. All Rights Reserved. <br>
-    Design by <b>Equipe de Ti da Luminous.</b>
-  </div>
 </body>
+
 </html>
-
-<script>
-    function gastos_lamp(){
-        if(lampada.value ==""){
-            alert('Escolha um tipo de lampada,Por favor')
-            resultado_economia.style.display = 'none';
-        }else{
-        consumo = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(horas.value) 
-        * Number(dias.value);
-        gasto_mes = consumo * 0.25971;
-        gasto_ano = gasto_mes * 12;
-
-        //lamp.innerHTML = `${lampada.value}`;
-        b_consumo.innerHTML = `${consumo.toFixed(2)}(kWh/mês)`; 
-        despesa_mes.innerHTML = `R$ ${gasto_mes.toFixed(2)}`;
-        despesa_ano.innerHTML = `R$ ${gasto_ano.toFixed(2)}`;
-
-        result.style.display = 'block';
-        }
-    }
-
-    function calcularEconomia(){
-     
-        consumo = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(horas.value) 
-        * Number(dias.value);
-        gasto_mes = consumo * 0.25971;
-        gasto_ano = gasto_mes * 12;
-
-        consumo2 = Number(lampada.value)/1000 * Number(qtd_lamp.value) * Number(novas_horas.value) 
-        * Number(dias.value);
-        gasto_mes2 = consumo2 * 0.25971;
-        gasto_ano2 = gasto_mes2 * 12;
-
-        b_consumo2.innerHTML = `${consumo2.toFixed(2)}(kWh/mês)`;
-        despesa_mes2.innerHTML = `R$ ${gasto_mes2.toFixed(2)}`;
-        despesa_ano2.innerHTML = `R$ ${gasto_ano2.toFixed(2)}`;
-
-        var diferenca = gasto_ano - gasto_ano2;
-        valor_economizado.innerHTML = `R$ ${diferenca.toFixed(2)} (${((diferenca * 100) / gasto_ano).toFixed(1)}%)`;
-
-        resultado_economia.style.display = 'block';
-        
-    }
-</script>
-<script>
-    var mybutton = document.getElementById("myBtn");
-
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
- if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-   mybutton.style.display = "block";
- } else {
-   mybutton.style.display = "none";
- }
-}
-
-
-function topFunction() {
- document.body.scrollTop = 0;
- document.documentElement.scrollTop = 0;
-}
-</script>
