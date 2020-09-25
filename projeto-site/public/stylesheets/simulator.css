@@ -41,7 +41,7 @@ header {
     color: #565656;
 }
 
-select:hover {
+select:focus {
     -webkit-appearance: none;
 }
 

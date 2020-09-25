@@ -13,7 +13,7 @@ function gastos_lamp() {
         despesa_mes.innerHTML = `R$ ${gasto_mes.toFixed(2)}`;
         despesa_ano.innerHTML = `R$ ${gasto_ano.toFixed(2)}`;
 
-        result.style.display = 'block';
+        // direita.style.display = 'block';
     }
 }
 
@@ -36,6 +36,6 @@ function calcularEconomia() {
     var diferenca = gasto_ano - gasto_ano2;
     valor_economizado.innerHTML = `R$ ${diferenca.toFixed(2)} (${((diferenca * 100) / gasto_ano).toFixed(1)}%)`;
 
-    resultado_economia.style.display = 'block';
+    // resultado_economia.style.display = 'block';
 
 }
