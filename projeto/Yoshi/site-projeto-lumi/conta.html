@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/conta1.css">
+    <link rel="shortcut icon" href="img/desk-lamp.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script src="duvida.js"></script>
+    <script src="funcoes.js"></script>
+    <link rel="stylesheet" href="css/conta-cab-fot.css">
+    <title>Conta</title>
+</head>
+<body>
+   
+    
+
+    <div class="header">
+        <div class="container">
+            <div>
+                <img class="icon-ball" src="img/desk-lamp.png" alt="">
+            </div>
+            <div class="title-header">
+               <b><span class="highlight" style="font-size: 30px;"><span style="color:  #ffd700;">Lumi</span>nous</span></b>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="nav-dash"><a href="dashboard.html" style="color:white">Dashboard</a></li>
+                    <li class="nav-jogos"><a href="conta.html"style="color:#ffd700">Conta</a></li>
+                    <li class="nav-favoritos"><a href="filial.html">Cadastrar Filiais</a></li>
+                    <li class="nav-dropdown">
+                        <button class="dropbtn">
+							<img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, <span id="b_usuario"></span></span>
+                        </button>
+                        <div class="dropdown-content">
+                        
+                            <a class="sign-out" href="#" onclick="logoff()">Sair</a>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="conta">
+            <div class=""><h3 class="titulo">Dados do Representante</h3></div>
+            <div class="linha">
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Nome*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="Nome">
+                    </div>
+                </div>
+            
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>CPF*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="CPF">
+                    </div>
+                </div>
+            
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Data de Nascimento*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="date" id="DN">
+                    </div>
+                </div>
+            </div>
+            <div class="linha">
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>RG*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="RG">
+                    </div>
+                </div>
+            
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Email*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="email" id="LG">
+                    </div>
+                </div>
+            
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Senha*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="password" id="SE">
+                    </div>
+                </div>
+            </div>
+            
+            
+                
+            
+             <div class="titulo-empresa">
+                 <h3 class="titulo-2">Dados da Empresa</h3>
+            </div>
+          
+            <div class="linha">
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>CNPJ*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="cn">
+                    </div>
+                </div>
+            
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Nome da Empresa*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="NE">
+                    </div>
+                </div>
+            
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Telefone*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="tel" value="(11) 9 73113353">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="linha">
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Telefone(opcional)</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="tek" value="(11) 9 40028922">
+                    </div>
+                </div> 
+            </div>
+            <div class="titulo-empresa">
+                <h3 class="titulo-2">Dados da Filial</h3>
+           </div>
+         
+           <div class="linha">
+               <div class="dados">
+                   <div class="dados-title">
+                       <span>N° da Filial*</span>
+                   </div>
+                   <div class="input-resultado">
+                       <input type="number" value="3">
+                   </div>
+               </div>
+           
+               <div class="dados">
+                   <div class="dados-title">
+                       <span>Representante(CPF)*</span>
+                   </div>
+                   <div class="input-resultado">
+                       <input type="text" value="264.***.***-63">
+                   </div>
+               </div>
+           
+               <div class="dados">
+                   <div class="dados-title">
+                       <span>Telefone*</span>
+                   </div>
+                   <div class="input-resultado">
+                       <input type="tel" value="(11) 9 45698752">
+                   </div>
+               </div>
+           </div>
+           <div class="linha">
+            <div class="dados">
+                <div class="dados-title">
+                    <span>Telefone</span>
+                </div>
+                <div class="input-resultado">
+                    <input type="tel" value="(11) 9 47829715">
+                </div>
+            </div>
+        
+            <div class="dados">
+                <div class="dados-title">
+                    <span>CEP</span>
+                </div>
+                <div class="input-resultado-cep">
+                    <input type="text" value="09540-630">
+                </div>
+            </div>
+        
+            <div class="dados-cep">
+                <button class="btn-ok"> OK</button>
+            </div>
+            <div class="dados-cep">
+                <div class="correios">
+                    <span><a target="_blank" class="link-correios" href="http://www.buscacep.correios.com.br/sistemas/buscacep/">Não sei meu CEP</a></span>
+                </div>
+            </div>
+            <div class="dados-uf">
+                <div class="estado">
+                    <select  name="estado" id="fisica-estado">
+                        <option disabled>UF</option>
+                                <option value="AC" disabled>AC</option>
+                                <option value="AL" disabled>AL</option>
+                                <option value="AM" disabled>AM</option>
+                                <option value="AM" disabled>AM</option>
+                                <option value="AP" disabled>AP</option>
+                                <option value="BA" disabled>BA</option>
+                                <option value="CE" disabled>CE</option>
+                                <option value="DF" disabled>DF</option>
+                                <option value="DF" disabled>DF</option>
+                                <option value="ES" disabled>ES</option>
+                                <option value="GO" disabled>GO</option>
+                                <option value="GO" disabled>GO</option>
+                                <option value="MA" disabled>MA</option>
+                                <option value="MG" disabled>MG</option>
+                                <option value="MS" disabled>MS</option>
+                                <option value="MT" disabled>MT</option>
+                                <option value="PA" disabled>PA</option>
+                                <option value="PB" disabled>PB</option>
+                                <option value="PE" disabled>PE</option>
+                                <option value="PI" disabled>PI</option>
+                                <option value="PR" disabled>PR</option>
+                                <option value="RJ" disabled>RJ</option>
+                                <option value="RN" disabled>RN</option>
+                                <option value="RR" disabled>RR</option>
+                                <option value="RO" disabled>RO</option>
+                                <option value="RS" disabled>RS</option>
+                                <option value="SC" disabled>SC</option>
+                                <option value="SE" disabled>SE</option>
+                                <option value="SP" selected>SP</option>
+                                <option value="TO" disabled>TO</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="dados">
+                <div class="dados-title">
+                    <span>Cidade*</span>
+                </div>
+                <div class="input-resultado">
+                    <input type="text" value="São Caetano do Sul">
+                </div>
+            </div>
+        
+            <div class="dados">
+                <div class="dados-title">
+                    <span>Bairro*</span>
+                </div>
+                <div class="input-resultado">
+                    <input type="text" value="Olímpico">
+                </div>
+            </div>
+        
+            <div class="dados">
+                <div class="dados-title">
+                    <span>Rua*</span>
+                </div>
+                <div class="input-resultado">
+                    <input type="tel" value="Pindorama">
+                </div>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="dados">
+                <div class="dados-title">
+                    <span>Número*</span>
+                </div>
+                <div class="input-resultado">
+                    <input type="tel" value="(11) 9 34565492">
+                </div>
+            </div>
+        
+            <div class="dados">
+                <div class="dados-title">
+                    <span>Email*</span>
+                </div>
+                <div class="input-resultado">
+                    <input type="email" value="luminous@gmail.com">
+                </div>
+            </div>
+        
+            <div class="dados">
+                <div class="dados-title">
+                    <span>Senha*</span>
+                </div>
+                <div class="input-resultado">
+                    <input type="password" value="34567899876">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+                <div class="footer">
+                    <div class="container-footer-left">
+                      <p>
+                        <h2>Sobre a Luminous</h2>
+                      </p>
+                      <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica,
+                        percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz,
+                        então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
+                      </p>
+                    </div>
+                        
+                    <div class="container-footer-right">
+                      <div class="icons">
+                        <ul>
+                          <a target="_blank" href="https://www.instagram.com/empresa_luminous/"><li> <img src="img/instagram.png" class="logo" alt=""> </li></a>
+                          <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour"><li><img src="img/facebook.png" class="logo" alt=""></li></a>
+                          <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-"><li><img src="img/github.png" class="logo" alt=""></li></a>
+                          <a target="_blank" href=""><li><img src="img/linkedin.png" class="logo" alt=""></li></a>
+                        </ul>
+                      </div>
+                    </div>
+                    <div style="position: absolute;margin-left: 54.4%;
+                    margin-top: 80px;width: 300px;" class="duvida">
+                    <div class="lado-duvida">
+		<b style="font-size: 20px;margin-top: 26px;position: absolute;">Insira Seu Email:</b> <a href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação" 
+		  class="fas fa-question"></i></a> <br></div>
+		  
+		 <form method="POST"  action="" id="form_email" onsubmit="return enviarDuvida()" class="lado-duvida">
+			 <input placeholder="receba novidas sobre a Luminous" id="input-email-footer" type="text" name="email"  > <br>
+			 <input id="btn-email-footer" type="submit" style="cursor: pointer;" value="OK" class="btnNov">
+		 </form>
+	</div>
+                  </div>
+                  <div class="footer_copyright">
+                    © copyright <b>Luminous</b>. All Rights Reserved. <br>
+                    Design by <b>Equipe de Ti da Luminous.</b>
+                  </div>
+            
+</body>
+</html>
+<script>
+    verificar_autenticacao()
+</script>

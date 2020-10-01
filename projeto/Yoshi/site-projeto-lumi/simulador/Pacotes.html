@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/stylesim.css">
+    <link rel="icon" href="lamp.png">
+    <title> Pacotes </title>
+</head>
+<body>
+        <div class="header">
+                <div class="container">
+                    <div class="title-header">
+                        <img src="img/desk-lamp.png" class="logo"><h1>Lumi<span id="lumi">nous</span></h1>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="" class="current">Início</a></li>
+                            <li><a href="">Sobre Nós</a></li>
+                            <li><a href="simulador.html">Simulador</a></li>
+                            <li><a href="Pacotes.html">Pacotes</a></li>
+                            <li><a href="">Equipe</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="nav-end">
+                        <ul>
+                            <li class="l2"><a href="">Cadastrar</a></li>
+                            <li class="l2"><a href="">Entrar</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+
+<div id="backP">
+    <center>
+        <h1> Calculo para Pacote </h1>
+        
+    <div id="efeito">
+            <h3>Planos</h3>
+<h4>
+            Escolha um dos nossos pacotes
+            <br>
+            <select id="lampada">
+                <option value="25"> 1 kit </option>
+                <option value="45"> 2 kits </option>
+                <option value="65"> 3 kits </option>
+                <option value="85"> 4 kits </option>
+                <option value="100"> 5 kits </option>
+                <option value="115"> 6 kits </option>
+                <option value="130"> 7 kits </option>
+                <option value="145"> 8 kits </option>
+                <option value="160"> 9 kits </option>
+                <option value="175"> 10 kits </option>
+                <option value="2000">Personalizado</option>
+            </select>
+
+            <br>
+            <br>
+            Quantidade de cômodos
+            <br>
+            <input type="number" id="qtd_lamp">
+            <br>
+            <br>
+            Consumo médio diário em horas
+            <br>
+            <input type="number" id="horas">
+            <br>
+            <br>
+            Quantidade de dias ao mês
+            <br>
+            <input type="number" id="dias">
+            <br>
+            <br>
+        </h4>
+            <button onclick="gastos_lamp()"> Calcular </button>
+            <br>
+        </div>
+            <div id="result" style="display: none;">
+                <br><br>
+                <b> Custo do plano: <b id="b_consumo" style="color: rgb(255, 230, 87);"> </b> </b>
+                <br>
+                <b> Custo por mês: <b id="despesa_mes" style="color: rgb(255, 212, 212);"></b> </b>
+                <br>
+                <b> Custo por ano: <b id="despesa_ano" style="color: rgb(255, 77, 255);"></b> </b>
+
+                <br>
+                <br>
+
+            
+    
+    </center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<div class="footer">
+            <div class="container-footer-left">
+                <p><h2>Sobre a Luminous</h2></p>
+                <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica, percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz, então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.</p>
+            </div>
+            <div class="container-footer-right">
+                <div class="icons">
+                    <ul>
+                       <li>  <img src="img/instagram.png"  class="logo" alt=""> </li> <img src="" alt="">
+                       <li><img src="img/facebook.png"  class="logo" alt=""></li>
+                       <li><img src="img/twitter.png" class="logo" alt=""></li>
+                       <li><img src="img/linkedin.png" class="logo"  alt=""></li>
+                    </ul>
+                </div>
+                    </div>
+        </div>
+        
+        
+        <div class="footer_copyright">
+            © copyright <b>Luminous</b>. All Rights Reserved. <br>
+            Design by <b>Equipe de Ti da Luminous.</b>
+</div>
+</body>
+</html>
+
+<script>
+    function gastos_lamp(){
+        consumo = Number(lampada.value)/23 * Number(horas.value)* Number(dias.value);
+        gasto_mes = consumo * 0.25;
+        gasto_ano = gasto_mes * 12;
+
+        //lamp.innerHTML = `${lampada.value}`;
+        b_consumo.innerHTML = `${consumo.toFixed(2)}`; 
+        despesa_mes.innerHTML = `R$ ${gasto_mes.toFixed(2)}`;
+        despesa_ano.innerHTML = `R$ ${gasto_ano.toFixed(2)}`;
+
+        result.style.display = 'block';
+    }
+
+</script>

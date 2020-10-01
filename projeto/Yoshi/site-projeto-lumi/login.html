@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/desk-lamp.png">
+    <link rel="stylesheet" href="css/login.css">
+
+    <title>Login</title>
+</head>
+<body>
+  
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html" >Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="simulador.html">Simulador</a></li>
+                    <li><a href="pacotes.html" >Pacotes</a></li>
+                   
+                   
+                  
+                </ul>
+               
+              
+              
+            </div>
+            <div class="nav-end">
+                <ul>
+                    <li class="l2" ><a href="cadastro.html"> Cadastrar</a></li>
+                    <li class="l2"><a href="login.html"><span id="l3">Entrar</span></a></li>
+                </ul>
+               
+              
+              
+            </div>
+        </div>
+    </div>
+   
+    <form class="box" action="" onsubmit="return entrar()" id="form_login" method="POST">
+        <h1>Entrar</h1>
+        <input type="email" class="input" placeholder="Email" id="em" name="emailLogin" required>
+        <input type="password" type="password" class="input" placeholder="Senha" id="se" name="senhaLogin" required>
+        <button  class="btn" type="submit" onclick="logar()">Logar</button>
+        <span id="errado"></span>
+    </form>
+
+<img style="display: none;" id="carregando" src="img/carregando-2.gif" alt="">
+
+    <div class="footer">
+      <div class="container-footer-left">
+        <p>
+          <h2>Sobre a Luminous</h2>
+        </p>
+        <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica,
+          percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz,
+          então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
+        </p>
+      </div>
+      <div class="container-footer-right">
+        <div class="icons">
+          <ul>
+            <a target="_blank" href="https://www.instagram.com/empresa_luminous/"><li> <img src="img/instagram.png" class="logo" alt=""> </li></a>
+            <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour"><li><img src="img/facebook.png" class="logo" alt=""></li></a>
+            <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-"><li><img src="img/github.png" class="logo" alt=""></li></a>
+            <a target="_blank" href=""><li><img src="img/linkedin.png" class="logo" alt=""></li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copyright">
+      © copyright <b>Luminous</b>. All Rights Reserved. <br>
+      Design by <b>Equipe de Ti da Luminous.</b>
+    </div>
+</body>
+</html>
+<script>
+ 
+function logar(){
+
+}
+    
+function entrar() {
+      
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+                carregando.style.display = "block";
+                form_login.style.opacity = 0;
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.Email;
+                    sessionStorage.nome_usuario_meuapp = json.Nome;
+                    sessionStorage.cnpj_empresa_meuapp = json.fkCNPJ;
+                    sessionStorage.senha_meuapp = json.senha;
+                    sessionStorage.cpf_usuario_meuapp = json.CPF;
+                    sessionStorage.rg_usuario_meuapp = json.RG;
+                    sessionStorage.nome_empresa_meuapp = json.Nome;
+                   
+                    
+                    var delay=3000; //3 seconds
+                        setTimeout(function(){
+                            window.location.href = 'dashboard.html';
+                                //your code to be executed after 1 seconds
+                        },delay);
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    
+                });
+            }
+        });
+
+        return false;
+    }
+ 
+</script>
+
+
+
+  
