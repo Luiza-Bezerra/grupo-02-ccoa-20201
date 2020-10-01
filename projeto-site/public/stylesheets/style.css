@@ -232,3 +232,66 @@ input[type="date"]
 input[type="date"]:focus{  
   color: var(--color-yellow-t);
 }
+
+/* CSS do protótipo da tela Pacotes */
+  /* Colocarei comentado apra não interferir no CSS das outras páginas */
+  /* #conteudo {
+    display: block;
+    width: 100%;
+  }
+  #packages {
+    display: inline-block;
+    width: 280px;
+    height: 400px;
+    background: var(--color-beige);
+    color: var(--color-black);
+    margin: 20px;
+    padding: 5px;
+  }
+
+  #packages span{
+    font-size: 0.9em;
+    color: var(--color-black);
+    display: block;
+    margin: 15px 0;
+  }
+  #title-package {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    
+  }
+  #title-package h1 {
+      font-size: 1.5em;
+      color: var(--color-yellow);
+      display: inline;
+  }
+  #agendamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #agendamento input {
+    display: block;
+    width: 450px;
+    height: 30px;
+    background-color: var(--color-black);
+    margin: 5px;
+    border: none;
+    color: var(--color-light-gray);
+    padding: 5px 20px;
+  }
+  #agendamento input#agendar {
+    display: block;
+    width: 200px;
+    height: 30px;
+    background-color: var(--color-black);
+    margin: 5px;
+    border: none;
+    color: var(--color-light-gray);
+    padding: 5px 5px 30px 5px;
+  }
+  #agendamento input#agendar:hover {
+    background-color: rgba(35, 35, 35, 0.808);
+  } */
