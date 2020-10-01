@@ -1,267 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="img/desk-lamp.png">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/slide.css">
-    <link rel="stylesheet" href="css/quadrados.css">
-    <link rel="stylesheet" href="css/video-you.css">
-    <link rel="stylesheet" href="css/recursos.css">
+    <link rel="shortcut icon" href="img/logotipo.png">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/responsive-default.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>Início</title>
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <title>Inicio</title>
+
 </head>
+
 <body>
-  
-    <div class="header">
-        <div class="container">
+
+    <header>
+        <nav class="container middle">
             <div class="title-header">
-                <img src="img/desk-lamp.png" class="logo"><h1><span id="lumi">Lumi</span>nous</h1>
+                <img src="img/logotipo.png" alt="logotipo Luminous - lampada">
+                <h1 class="highlight"> Lumi<span>nous</span></h1>
             </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="index.html" class="current">Início</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="simulador.html">Simulador</a></li>
-                    <li><a href="pacotes.html" >Pacotes</a></li>
-                    
-                   
-                  
-                </ul>
-               
-              
-              
-            </div>
+            <ul>
+                <li><a href="index.html" class="current">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="simulador.html">Simulador</a></li>
+                <li><a href="pacotes.html">Pacotes</a></li>
+
+            </ul>
             <div class="nav-end">
                 <ul>
                     <li class="l2"><a href="cadastro.html">Cadastrar</a></li>
                     <li class="l2"><a href="login.html"> Entrar</a></li>
                 </ul>
-               
-              
-              
             </div>
-        </div>
-    </div>
-    <div class="slidershow middle">
+        </nav>
+        <span class="mobile-menu">X</span>
+    </header>
+    <!-- DENTRO DA TAG MAIN - COLOCAR O CONTEÚDO DA PÁGINA -->
+    <main>
+        <div id="bannerluz">
+            <h2>Luminous</h2>
 
-        <div class="slides">
-          <input type="radio" name="r" id="r1" checked>
-          <input type="radio" name="r" id="r2">
-          <input type="radio" name="r" id="r3">
-        
-          <div class="slide s1">
-            <img src="img/1.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="img/2.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="img/3.png" alt="">
-          </div>
-       
+            <p>O melhor custo-benefício, para você <br> economizar energia.</p>
         </div>
-  
-        <div class="navigation">
-          <label for="r1" class="bar"></label>
-          <label for="r2" class="bar"></label>
-          <label for="r3" class="bar"></label>
+        <div id="divtexto">
+            <h3>Conheça-nos um pouco...</h3>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos sint est aliquid nam consequuntur
+                maiores placeat consequatur error vero eos incidunt dolor amet, illo repudiandae eum numquam optio
+                velit. Labore.
+            </p>
+            <br><br>
+            <p>. Quem manda na minha terra sou euzis! Suco de cevadiss deixa as pessoas mais interessantis. </p>
+            <span>...</span>
         </div>
-      </div>
-      <div class="caixas">
-        <div class="container-box-1">
-            <p><img src="img/foguete-cor.png"  class="icones" alt=""></p>
-            <div class="caixas-title">
-                <h3>Otimização</h3>
-            </div>
-            <div class="texto">
-                <span>Com o ajuste automatica da luminosidade da sua empresa/casa, garantimos uma otimização dos gastos com energia</span>
-            </div>
-        </div>
-        <div class="container-box-1">
-            <p><img src="img/conta-cor.png"  class="icones" alt=""></p>
-            <div class="caixas-title">
-                <h3>Controle</h3>
-            </div>
-            <div class="texto">
-                <span>O cliente tem um maior controle em relação ao gasto de energia elétrica, por consequência, um controle maior sobre suas contas de luz</span>
-            </div>
-        </div>
-        <div class="container-box-1">
-            <p><img src="img/saude-cor.png"  class="icones" alt=""></p>
-            <div class="caixas-title">
-                <h3>Saúde</h3>
-            </div>
-            <div class="texto">
-                <span>É provado que a exposição excessiva a luz em ambiente fechado, causa a longo do tempo problemas oculares, além de prejudicar quem já tem alguma doença relacionada a visão</span>
-            </div>
-        </div>
-        <div class="container-box-1">
-            <p><img src="img/luz-cor.png"  class="icones" alt=""></p>
-            <div class="caixas-title">
+        <div id="div_cards">
+            <div class="card">
+                <img src="img/luz-cor.png" class="card_icon" alt="Icone">
+                <br>
                 <h3>Sustentável</h3>
+                <br>
+                <p>Com o controle da
+                    luminosidade, reduzirá o gasto
+                    com energia elétrica e assim,
+                    tendo um consumo mais
+                    consciente e sustentável.</p>
             </div>
-            <div class="texto">
-                <span>Com o controle da luminosidade, reduzirá o gasto com energia elétrica e assim, tendo um consumo mais consciente e sustentável</span>
+            <div class="card">
+                <img src="img/foguete-cor.png" class="card_icon" alt="Icone">
+                <br>
+                <h3>Otimização</h3>
+                <br>
+                <p>Com o ajuste automatica da
+                    luminosidade da sua
+                    empresa/casa, garantimos uma
+                    otimização dos gastos com
+                    energia.</p>
             </div>
-        </div>
-    </div>
-   
-       
-        
-      <div class="container-features">
-        <div class="container-features-content-economic">
-            <div class="image-features">
-                <p><img src="img/economico.png" alt="" class="images-features-economic"></p>
+            <div class="card">
+                <img src="img/controle.png" class="card_icon" alt="Icone">
+                <br>
+                <h3>Controle</h3>
+                <br>
+                <p>O cliente tem um maior controle
+                    em relação ao gasto de energia
+                    elétrica, por consequência, um
+                    controle maior sobre suas contas
+                    de luz.</p>
             </div>
-            <div class="text-features">
-                <div class="title-features">
-                    <h2>Economia</h2>
-                </div>
-                <div class="description-features">
-                    Com a regulação da luminosidade utilizando apenas o necessário, sem desperdício.
-                     Somos o projeto perfeito para você que quer um uso da eletricidade consciente.
-                </div>
-                <div class="feature-topics">
-                    <div class="image-topics">
-                        <img class="image-check" src="img/check.png" alt="">
-                    </div>
-                    <div class="feature-topics-title">
-                        <h3>Bom para o planeta</h3>
-                    </div>
-                </div>   
-                <div class="feature-topics">
-                    <div class="image-topics">
-                        <img class="image-check" src="img/check.png" alt="">
-                    </div>
-                    <div class="feature-topics-title">
-                        <h3>Bom para o seu bolso</h3>
-                    </div>
-                </div>  
-    
-            </div>
-        </div>
-    
-    </div>
-        
-        <div class="container-features">
-            <div class="container-features-content-graphics">
-                <div class="image-features">
-                    <p><img src="img/graficos.png" alt="" class="images-features-graphics"></p>
-                </div>
-                <div class="text-features">
-                    <div class="title-features">
-                        <h2>Gráficos e estatísticas</h2>
-                    </div>
-                    <div class="description-features">
-                        Você também poderá acessar a aba de gráficos e estatísticas, que exibe dados reais sobre o gasto de energia gerado pelas lâmpadas e traça um paralelo com o quanto foi economizado em energia e consequentemente na conta de luz no final do mês.
-                    </div>   
-                    <div class="feature-topics">
-                        <div class="image-topics">
-                            <img class="image-check" src="img/check.png" alt="">
-                        </div>
-                        <div class="feature-topics-title">
-                            <h3>Dados</h3>
-                        </div>
-                    </div>   
-                    <div class="feature-topics">
-                        <div class="image-topics">
-                            <img class="image-check" src="img/check.png" alt="">
-                        </div>
-                        <div class="feature-topics-title">
-                            <h3>Evolução</h3>
-                        </div>
-                    </div>  
-                </div>
+            <div class="card">
+                <img src="img/saude-cor.png" class="card_icon" alt="Icone">
+                <br>
+                <h3>Saúde</h3>
+                <br>
+                <p>É provado que a exposição
+                    excessiva a luz em ambiente
+                    fechado, causa a longo do tempo
+                    problemas oculares, além de
+                    prejudicar quem já tem alguma
+                    doença relacionada a visão.</p>
             </div>
         </div>
-    
-    
-    
-        <div class="container-features">
-            <div class="container-features-content-control">
-                <div class="image-features">
-                    <p><img src="img/controle.png" alt="" class="images-features-control"></p>
-                </div>
-                <div class="text-features">
-                    <div class="title-features">
-                        <h2>Controle</h2>
+        <div id="div_pontos">
+            <div class="blocos_infos">
+                <div class="bola">
+                    <div class="circle_icon">
+                        <img src="img/economico.png" alt="Icone" class="icone_circulo">
                     </div>
-                    <div class="description-features">
-                        Com a nossa ferramenta, é possível ter controle total de como você deseja ter sua iluminação. E com o ajuste automatico, isso fica mais fácil ainda.
-                    </div>   
-                    <div class="feature-topics">
-                        <div class="image-topics">
-                            <img class="image-check" src="img/check.png" alt="">
-                        </div>
-                        <div class="feature-topics-title">
-                            <h3>Controle total</h3>
-                        </div>
-                    </div>   
-                    <div class="feature-topics">
-                        <div class="image-topics">
-                            <img class="image-check" src="img/check.png" alt="">
-                        </div>
-                        <div class="feature-topics-title">
-                            <h3>Automático</h3>
-                        </div>
-                    </div>  
-                         
+                </div>
+                <div class="descricao">
+                    <h3>Economia</h3>
+                    <br>
+                    <p>Com a regulação da luminosidade utilizando apenas o necessário, sem
+                        desperdício. Somos o projeto perfeito para você que quer um uso da
+                        eletricidade consciente.</p>
                 </div>
             </div>
-        </div>
+            <div class="blocos_infos">
+                <div class="descricao">
+                    <h3>Gráficos e Estatísticas</h3>
+                    <br>
+                    <p>Você também poderá acessar a aba de gráficos e estatísticas,
+                        que exibe dados reais sobre o gasto de energia gerado pelas
+                        lâmpadas e traça um paralelo com o quanto foi economizado em
+                        energia e consequentemente na conta de luz no final do mês.</p>
+                </div>
+                <div class="bola">
+                    <div class="circle_icon">
+                        <img src="img/graficos.png" alt="Icone" class="icone_circulo">
+                    </div>
+                </div>
+            </div>
+            <div class="blocos_infos">
+                <div class="bola">
+                    <div class="circle_icon">
+                        <img src="img/controle.png" alt="Icone" class="icone_circulo">
+                    </div>
+                </div>
+                <div class="descricao">
+                    <h3>Controle</h3>
+                    <br>
+                    <p>Com a nossa ferramenta, é possível ter controle total de como você
+                        deseja ter sua iluminação. E com o ajuste automatico, isso fica mais
+                        fácil ainda.</p>
+                </div>
+            </div>
 
-        <i onclick="topFunction()" id="myBtn" title="Go to top" class="fas fa-chevron-up"></i>
-    
+            <div class="linha linha1"></div>
+            <div class="linha linha2"></div>
 
-    </div>
-    <div class="footer">
-        <div class="container-footer-left">
-          <p>
-            <h2>Sobre a Luminous</h2>
-          </p>
-          <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica,
-            percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz,
-            então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
-          </p>
         </div>
-        <div class="container-footer-right">
-          <div class="icons">
-            <ul>
-              <a target="_blank" href="https://www.instagram.com/empresa_luminous/"><li> <img src="img/instagram.png" class="logo" alt=""> </li></a>
-              <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour"><li><img src="img/facebook.png" class="logo" alt=""></li></a>
-              <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-"><li><img src="img/github.png" class="logo" alt=""></li></a>
-              <a target="_blank" href=""><li><img src="img/linkedin.png" class="logo" alt=""></li></a>
-            </ul>
-          </div>
+    </main>
+
+    <footer>
+        <div class="text-footer">
+            <span class="highlight">&copy;2020</span> - Desenvolvido com <span class="highlight">❤</span> pela
+            equipe <span class="highlight">Luminous</span>.
         </div>
-      </div>
-      <div class="footer_copyright">
-        © copyright <b>Luminous</b>. All Rights Reserved. <br>
-        Design by <b>Equipe de Ti da Luminous.</b>
-      </div>
+        <div class="social">
+
+            <a href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour" target="_blank"
+                rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://www.instagram.com/empresa_luminous/" target="_blank" rel="noopener noreferrer"
+                class="social-link">
+                <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/BandTec/grupo-02-ccoa-20201" target="_blank" rel="noopener noreferrer"
+                class="social-link">
+                <i class="fab fa-github-square"></i>
+            </a>
+
+        </div>
+    </footer>
+    <!-- Link fontawesome-->
+    <script src="https://kit.fontawesome.com/29db2d61c6.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
-
-<script>
-     var mybutton = document.getElementById("myBtn");
-
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
