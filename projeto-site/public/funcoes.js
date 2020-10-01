@@ -4,7 +4,7 @@ let login_usuario;
 let nome_usuario;
 let cnpj_empresa;
 let senha;
-let nome_empresa
+let nome_empresa;
 
 function redirecionar_login() {
     window.location.href = 'login.html';

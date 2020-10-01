@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/conta1.css">
     <link rel="shortcut icon" href="img/desk-lamp.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<script src="duvida.js"></script>
-    <script src="funcoes.js"></script>
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/conta-cab-fot.css">
     <title>Conta</title>
 </head>
+
 <body>
-   
-    
+
+
 
     <div class="header">
         <div class="container">
@@ -22,21 +23,23 @@
                 <img class="icon-ball" src="img/desk-lamp.png" alt="">
             </div>
             <div class="title-header">
-               <b><span class="highlight" style="font-size: 30px;"><span style="color:  #ffd700;">Lumi</span>nous</span></b>
+                <b><span class="highlight" style="font-size: 30px;"><span
+                            style="color:  #ffd700;">Lumi</span>nous</span></b>
             </div>
             <div class="nav">
                 <ul>
                     <li class="nav-dash"><a href="dashboard.html" style="color:white">Dashboard</a></li>
-                    <li class="nav-jogos"><a href="conta.html"style="color:#ffd700">Conta</a></li>
+                    <li class="nav-jogos"><a href="conta.html" style="color:#ffd700">Conta</a></li>
                     <li class="nav-favoritos"><a href="filial.html">Cadastrar Filiais</a></li>
                     <li class="nav-dropdown">
                         <button class="dropbtn">
-							<img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, <span id="b_usuario"></span></span>
+                            <img class="icon-user" src="img/user.png" alt=""><span class="ola">Olá, <span
+                                    id="b_usuario"></span></span>
                         </button>
                         <div class="dropdown-content">
-                        
+
                             <a class="sign-out" href="#" onclick="logoff()">Sair</a>
-                          </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -45,7 +48,9 @@
 
     <div class="container">
         <div class="conta">
-            <div class=""><h3 class="titulo">Dados do Representante</h3></div>
+            <div class="">
+                <h3 class="titulo">Dados do Representante</h3>
+            </div>
             <div class="linha">
                 <div class="dados">
                     <div class="dados-title">
@@ -55,7 +60,7 @@
                         <input type="text" id="Nome">
                     </div>
                 </div>
-            
+
                 <div class="dados">
                     <div class="dados-title">
                         <span>CPF*</span>
@@ -64,7 +69,7 @@
                         <input type="text" id="CPF">
                     </div>
                 </div>
-            
+
                 <div class="dados">
                     <div class="dados-title">
                         <span>Data de Nascimento*</span>
@@ -83,7 +88,7 @@
                         <input type="text" id="RG">
                     </div>
                 </div>
-            
+
                 <div class="dados">
                     <div class="dados-title">
                         <span>Email*</span>
@@ -92,7 +97,7 @@
                         <input type="email" id="LG">
                     </div>
                 </div>
-            
+
                 <div class="dados">
                     <div class="dados-title">
                         <span>Senha*</span>
@@ -102,14 +107,14 @@
                     </div>
                 </div>
             </div>
-            
-            
-                
-            
-             <div class="titulo-empresa">
-                 <h3 class="titulo-2">Dados da Empresa</h3>
+
+
+
+
+            <div class="titulo-empresa">
+                <h3 class="titulo-2">Dados da Empresa</h3>
             </div>
-          
+
             <div class="linha">
                 <div class="dados">
                     <div class="dados-title">
@@ -119,7 +124,7 @@
                         <input type="text" id="cn">
                     </div>
                 </div>
-            
+
                 <div class="dados">
                     <div class="dados-title">
                         <span>Nome da Empresa*</span>
@@ -128,7 +133,7 @@
                         <input type="text" id="NE">
                     </div>
                 </div>
-            
+
                 <div class="dados">
                     <div class="dados-title">
                         <span>Telefone*</span>
@@ -137,7 +142,7 @@
                         <input type="text" id="TELEMPRESA">
                     </div>
                 </div>
-                
+
             </div>
             <div class="linha">
                 <div class="dados">
@@ -147,186 +152,203 @@
                     <div class="input-resultado">
                         <input type="tek" id="TELEMPRESA2">
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="titulo-empresa">
                 <h3 class="titulo-2">Dados da Filial</h3>
-           </div>
-         
-           <div class="linha">
-               <div class="dados">
-                   <div class="dados-title">
-                       <span>N° da Filial*</span>
-                   </div>
-                   <div class="input-resultado">
-                       <form action="" method="POST" id="Form_bFilial" onsubmit="return buscarFilial()">
-                       <input style="position: absolute;width: 90px; " type="number" value="3" name="nFilial" > <button style="position: absolute; margin-top: -3px;margin-left: 110px;" type="submit" class="btn-ok">Pesquisar</button>
-                    </form>
-                   </div>
-               </div>
-           
-               <div style="margin-left: 100px;" class="dados">
-                   <div  class="dados-title">
-                       <span >Representante(CPF)*</span>
-                   </div>
-                   <div class="input-resultado">
-                       <input type="text" id="CPFFILIAL">
-                   </div>
-               </div>
-           
-               <div class="dados">
-                   <div class="dados-title">
-                       <span >Telefone*</span>
-                   </div>
-                   <div class="input-resultado">
-                       <input type="tel"  id="TELFILIAL">
-                   </div>
-               </div>
-           
-           
-        
-            
-            
-        </div>
-        <div class="linha">
-            
-            <div class="dados">
-                <div class="dados-title">
-                    <span>Cidade*</span>
-                </div>
-                <div class="input-resultado">
-                    <input type="text" id="CIDFILIAL">
-                </div>
             </div>
-        
-            <div class="dados">
-                <div class="dados-title">
-                    <span>Bairro*</span>
-                </div>
-                <div class="input-resultado">
-                    <input type="text" id="BAIFILIAL">
-                </div>
-            </div>
-        
-            <div class="dados">
-                <div class="dados-title">
-                    <span>Rua*</span>
-                </div>
-                <div class="input-resultado">
-                    <input style="width: 110px;" type="text" id="RUAFILIAL">
-                </div>
-            </div>
-            <div style="margin-left: 10px;margin-top: 63px;" class="dados-uf">
-                <div class="estado">
-                    <select style="height: 24px;"  name="estado" id="FE">
-                        <option>UF</option>
-                                <option value="AC" >AC</option>
-                                <option value="AL">AL</option>
-                                <option value="AM">AM</option>
 
-                                <option value="AP">AP</option>
-                                <option value="BA">BA</option>
-                                <option value="CE">CE</option>
-                                <option value="DF">DF</option>
-                               
-                                <option value="ES">ES</option>
-                                <option value="GO" >GO</option>
-                               
-                                <option value="MA" >MA</option>
-                                <option value="MG" >MG</option>
-                                <option value="MS" >MS</option>
-                                <option value="MT" >MT</option>
-                                <option value="PA" >PA</option>
-                                <option value="PB" >PB</option>
-                                <option value="PE" >PE</option>
-                                <option value="PI" >PI</option>
-                                <option value="PR" >PR</option>
-                                <option value="RJ" >RJ</option>
-                                <option value="RN" >RN</option>
-                                <option value="RR" >RR</option>
-                                <option value="RO" >RO</option>
-                                <option value="RS" >RS</option>
-                                <option value="SC" >SC</option>
-                                <option value="SE" >SE</option>
-                                <option value="sp" >SP</option>
-                                <option value="TO" >TO</option>
-                    </select>
+            <div class="linha">
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>N° da Filial*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <form action="" method="POST" id="Form_bFilial" onsubmit="return buscarFilial()">
+                            <input style="position: absolute;width: 90px; " type="number" value="3" name="nFilial">
+                            <button style="position: absolute; margin-top: -3px;margin-left: 110px;" type="submit"
+                                class="btn-ok">Pesquisar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div style="margin-left: 100px;" class="dados">
+                    <div class="dados-title">
+                        <span>Representante(CPF)*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="CPFFILIAL">
+                    </div>
+                </div>
+
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Telefone*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="tel" id="TELFILIAL">
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="linha">
+
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Cidade*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="CIDFILIAL">
+                    </div>
+                </div>
+
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Bairro*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="BAIFILIAL">
+                    </div>
+                </div>
+
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Rua*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input style="width: 110px;" type="text" id="RUAFILIAL">
+                    </div>
+                </div>
+                <div style="margin-left: 10px;margin-top: 63px;" class="dados-uf">
+                    <div class="estado">
+                        <select style="height: 24px;" name="estado" id="FE">
+                            <option>UF</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RR">RR</option>
+                            <option value="RO">RO</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="sp">SP</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="linha">
-            <div class="dados">
-                <div class="dados-title">
-                    <span>Número*</span>
+            <div class="linha">
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Número*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="text" id="NUMFILIAL">
+                    </div>
                 </div>
-                <div class="input-resultado">
-                    <input type="text" id="NUMFILIAL">
+
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Email*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="email" value="luminous@gmail.com">
+                    </div>
+                </div>
+
+                <div class="dados">
+                    <div class="dados-title">
+                        <span>Senha*</span>
+                    </div>
+                    <div class="input-resultado">
+                        <input type="password" value="34567899876">
+                    </div>
                 </div>
             </div>
-        
-            <div class="dados">
-                <div class="dados-title">
-                    <span>Email*</span>
-                </div>
-                <div class="input-resultado">
-                    <input type="email" value="luminous@gmail.com">
-                </div>
-            </div>
-        
-            <div class="dados">
-                <div class="dados-title">
-                    <span>Senha*</span>
-                </div>
-                <div class="input-resultado">
-                    <input type="password" value="34567899876">
-                </div>
-            </div>
-        </div>
         </div>
     </div>
-                <div class="footer">
-                    <div class="container-footer-left">
-                      <p>
-                        <h2>Sobre a Luminous</h2>
-                      </p>
-                      <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia elétrica,
-                        percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados a luz,
-                        então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse gastos.
-                      </p>
-                    </div>
-                        
-                    <div class="container-footer-right">
-                      <div class="icons">
-                        <ul>
-                          <a target="_blank" href="https://www.instagram.com/empresa_luminous/"><li> <img src="img/instagram.png" class="logo" alt=""> </li></a>
-                          <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour"><li><img src="img/facebook.png" class="logo" alt=""></li></a>
-                          <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-"><li><img src="img/github.png" class="logo" alt=""></li></a>
-                          <a target="_blank" href=""><li><img src="img/linkedin.png" class="logo" alt=""></li></a>
-                        </ul>
-                      </div>
-                    </div>
-                    <div style="position: absolute;margin-left: 54.4%;
+    <div class="footer">
+        <div class="container-footer-left">
+            <p>
+            <h2>Sobre a Luminous</h2>
+            </p>
+            <p>A Luminous foi fundada em 2020, visando solucionar os problemas de gastos desnecessário de energia
+                elétrica,
+                percebemos que varias instituições podem economizar muito dinheiro somente cortando gastos relacionados
+                a luz,
+                então decidimos agir para que essas instituições possam economizar dinheiro através do controle desse
+                gastos.
+            </p>
+        </div>
+
+        <div class="container-footer-right">
+            <div class="icons">
+                <ul>
+                    <a target="_blank" href="https://www.instagram.com/empresa_luminous/">
+                        <li> <img src="img/instagram.png" class="logo" alt=""> </li>
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Luminous-115033170192448/?modal=admin_todo_tour">
+                        <li><img src="img/facebook.png" class="logo" alt=""></li>
+                    </a>
+                    <a target="_blank" href="https://github.com/BandTec/Grupo-02-CCO-Luminous-">
+                        <li><img src="img/github.png" class="logo" alt=""></li>
+                    </a>
+                    <a target="_blank" href="">
+                        <li><img src="img/linkedin.png" class="logo" alt=""></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div style="position: absolute;margin-left: 54.4%;
                     margin-top: 80px;width: 300px;" class="duvida">
-                    <div class="lado-duvida">
-		<b style="font-size: 20px;margin-top: 26px;position: absolute;">Insira Seu Email:</b> <a href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação" 
-		  class="fas fa-question"></i></a> <br></div>
-		  
-		 <form method="POST"  action="" id="form_email" onsubmit="return enviarDuvida()" class="lado-duvida">
-			 <input placeholder="receba novidas sobre a Luminous" id="input-email-footer" type="text" name="email"  > <br>
-			 <input id="btn-email-footer" type="submit" style="cursor: pointer;" value="OK" class="btnNov">
-		 </form>
-	</div>
-                  </div>
-                  <div class="footer_copyright">
-                    © copyright <b>Luminous</b>. All Rights Reserved. <br>
-                    Design by <b>Equipe de Ti da Luminous.</b>
-                  </div>
-            
+            <div class="lado-duvida">
+                <b style="font-size: 20px;margin-top: 26px;position: absolute;">Insira Seu Email:</b> <a
+                    href="manual-de-instalacao.docx" download="Manual"><i title="Baixar Manual de Instalação"
+                        class="fas fa-question"></i></a> <br></div>
+
+            <form method="POST" action="" id="form_email" onsubmit="return enviarDuvida()" class="lado-duvida">
+                <input placeholder="receba novidas sobre a Luminous" id="input-email-footer" type="text" name="email">
+                <br>
+                <input id="btn-email-footer" type="submit" style="cursor: pointer;" value="OK" class="btnNov">
+            </form>
+        </div>
+    </div>
+    <div class="footer_copyright">
+        © copyright <b>Luminous</b>. All Rights Reserved. <br>
+        Design by <b>Equipe de Ti da Luminous.</b>
+    </div>
+    <script src="duvida.js"></script>
+    <script src="funcoes.js"></script>
+    <script>
+        verificar_autenticacao()
+        ContaDados()
+        buscarEmpresa()
+
+    </script>
 </body>
+
 </html>
-<script>
-    verificar_autenticacao()
-    ContaDados()
-    buscarEmpresa()
-    
-</script>

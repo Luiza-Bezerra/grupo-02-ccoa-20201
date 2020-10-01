@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="stylesheets/responsive-default.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>Modelo</title>
+    <title>Cadastro Empresa e Representante - Luminous</title>
 
 </head>
 
@@ -41,8 +41,8 @@
     </header>
     <!-- DENTRO DA TAG MAIN - COLOCAR O CONTEÚDO DA PÁGINA -->
     <main class="container margin-30-y">
-        <form class="box"  method="POST" id="form_cadastro" onsubmit="return cadastrar()">
-            <fieldset>
+        <form class="box" action="" method="POST" id="form_cadastro" onsubmit="return cadastrar()">
+         <fieldset>
                 <span class="titulo_form">.Cadastro empresa</span>
                 <input class="input b-line-bottom" placeholder="Cnpj" type="text" name="cnpj" id="cnpj" minlength="14" maxlength="14"
                     required>
@@ -52,8 +52,7 @@
                     maxlength="11" required>
                 <input type="text" class="input b-line-bottom" placeholder="Telefone 2" name="tel2" minlength="8" maxlength="11"
                     required>
-                <input type="submit" class="btn" value="Cadastrar">
-            </fieldset>
+                    <input type="submit" class="btn" value="Cadastrar">            </fieldset>
             <fieldset>
                 <span class="titulo_form">.Cadastro Representante</span>
                 <input type="text" class="input b-line-bottom" placeholder="Nome Representante" name="nomeRepre" id="nomeRep"
@@ -99,6 +98,7 @@
     </footer>
     <!-- Link fontawesome-->
     <script src="https://kit.fontawesome.com/29db2d61c6.js" crossorigin="anonymous"></script>
+    <script src="cadastro.js"></script>
     <script src="js/main.js"></script>
 </body>
 

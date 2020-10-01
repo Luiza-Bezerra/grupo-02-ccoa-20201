@@ -3,14 +3,8 @@ function enviarDuvida(){
     fetch("/usuarios/enviarEmail", {
           method: "POST",
           body: formulario
-      }).then(function (response) {
-          
+      }).then(function (response) {         
       
-
-             
-            
-
-          
       });
       alert('Agora irar Receber as Novidades da Luminous em seu email')
       return false
