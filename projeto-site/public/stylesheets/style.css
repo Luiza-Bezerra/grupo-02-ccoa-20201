@@ -6,6 +6,7 @@
   --color-yellow: #deca5d;
   --color-yellow-t: #decb5dde;
   --color-light-gray: #f5f5f5;
+  --color-beige: #f5f5dc;
   /*
         PARA UTILIZAR AS VARIAVEIS COLOQUE A PROPRIEDADE E
          COMO VALOR  USE O NOME DA VARIAVEL
@@ -235,7 +236,7 @@ input[type="date"]:focus{
 
 /* CSS do protótipo da tela Pacotes */
   /* Colocarei comentado apra não interferir no CSS das outras páginas */
-  /* #conteudo {
+  #conteudo {
     display: block;
     width: 100%;
   }
@@ -294,4 +295,4 @@ input[type="date"]:focus{
   }
   #agendamento input#agendar:hover {
     background-color: rgba(35, 35, 35, 0.808);
-  } */
+  }
