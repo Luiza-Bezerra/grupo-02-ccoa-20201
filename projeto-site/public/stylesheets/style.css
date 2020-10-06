@@ -554,9 +554,10 @@ input[type="date"]:focus{
 }
 
 #direita_img {
-  margin-left: 10%;
-  height: 70%;
+  margin-left: 8%;
+  width: 33.95%;
   float: left;
+  filter: contrast(0.5);
 }
 
 #direita #esquerda2 {
