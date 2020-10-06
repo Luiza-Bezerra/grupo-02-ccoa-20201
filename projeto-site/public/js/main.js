@@ -73,13 +73,13 @@ function gastos_lamp() {
       let gasto_mes = consumo * 0.25971;
       let gasto_ano = gasto_mes * 12;
 
-      //lamp.innerHTML = `${lampada.value}`;
       b_consumo.innerHTML = `${consumo.toFixed(2)}(kWh/mês)`;
       despesa_mes.innerHTML = `R$ ${gasto_mes.toFixed(2)}`;
       despesa_ano.innerHTML = `R$ ${gasto_ano.toFixed(2)}`;
 
-      // direita.style.display = 'block';
-  }
+      direita_img.style.display = 'none';
+      direita.style.display = 'block';
+    }
 }
 
 function calcularEconomia() {

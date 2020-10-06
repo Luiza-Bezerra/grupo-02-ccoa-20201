@@ -323,7 +323,6 @@ input[type="date"]:focus{
 #divtexto {
     margin-left: 25%;
     width: 50%;
-    height: 26vh;
     margin-top: 30px;
     color: white;
     text-align: center;
@@ -551,6 +550,12 @@ input[type="date"]:focus{
 #direita {
   width: 49.95%;
   height: 95%;
+  float: left;
+}
+
+#direita_img {
+  margin-left: 10%;
+  height: 70%;
   float: left;
 }
 
