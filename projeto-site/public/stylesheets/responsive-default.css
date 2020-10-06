@@ -25,7 +25,49 @@
   .text-footer, .text-footer span{
     font-size: 0.7rem;
   }
+
+/* Simulador */
+
+  .alt_tela {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 120vh;
+  }
+  
+  #box_simulador {
+    border-radius: 0px;    
+  }
+
+  #pg_simulador header {
+    margin-bottom: 0px;
+  }
+
+  #direita_img {
+    display: none;
+  }
+
+  #linha {
+    height: 0.1%;
+    width: 100%;
+  }
+
+  #esquerda {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  #direita {
+    width: 100%;
+    height: 25%;
+
+  }
 }
+
 /*TABLET*/
 @media screen and (max-width: 900px) and (min-width: 600px) {
  /* para tablets */
