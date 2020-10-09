@@ -237,11 +237,15 @@ input[type="date"]:focus{
 /* CSS do protótipo da tela Pacotes */
   /* Colocarei comentado apra não interferir no CSS das outras páginas */
   #conteudo {
-    display: block;
+    display: flex;
     width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 40px 0;
   }
   #packages {
-    display: inline-block;
     width: 280px;
     height: 400px;
     background: var(--color-beige);
