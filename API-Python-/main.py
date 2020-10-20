@@ -3,7 +3,7 @@ from services.dataGenerator import getData
 import time
 
 # Inserir user, password, host, database
-mysql = Mysql('andre', 'Senha123456', 'localhost', 'projeto')
+mysql = Mysql('mario', 'mario03122000', 'localhost', 'projeto')
 
 mysql.connect()
 
