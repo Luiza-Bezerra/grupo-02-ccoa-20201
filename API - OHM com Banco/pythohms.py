@@ -156,7 +156,7 @@ def envTemperatura():
     else:
         return False
     
-print("Pegando", "\nClock: ", envClock(), "\nRAM: ", envRam(), "\nTemperatura: ", envTemperatura())
+# print("Pegando", "\nClock: ", envClock(), "\nRAM: ", envRam(), "\nTemperatura: ", envTemperatura())
 
 # print(dados)
 
