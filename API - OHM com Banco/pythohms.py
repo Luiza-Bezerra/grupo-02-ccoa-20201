@@ -105,34 +105,53 @@ class CrawlerOpenHardwareMonitor:
     
 #     return data
 
+ligar_config = {
+    "clock": True,
+    "ram": True,
+    "temperatura": True
+}
+
+def getHorario():
+    now = time.strftime('%Y-%m-%d %H:%M:%S')
+    return now
+
 def envClock():
     teste =  CrawlerOpenHardwareMonitor()   
     dados = teste.getInfo()
-    horario = time.strftime('%Y-%m-%d %H:%M:%S')
+    horario = getHorario()
     cpus = dados["CPU"]
     dataClock = (horario, float(cpus[0]["Clock"].replace(',','.').replace('MHz','')))
 
-    return dataClock
+    if (ligar_config["clock"] == True):
+        return dataClock
+    else:
+        return False
 
 def envRam():
     teste =  CrawlerOpenHardwareMonitor()   
     dados = teste.getInfo()
-    horario = time.strftime('%Y-%m-%d %H:%M:%S')
+    horario = getHorario()
     mem = dados["Memory"]
     dataRam = (horario, float(mem["Use"].replace(',','.').replace('GB','')))
 
-    return False
+    if (ligar_config["ram"] == True):
+        return dataRam
+    else:
+        return False
 
 def envTemperatura():
     teste =  CrawlerOpenHardwareMonitor()   
     dados = teste.getInfo()
-    horario = time.strftime('%Y-%m-%d %H:%M:%S')
+    horario = getHorario()
     cpus = dados["CPU"]
-    dataRam = (horario, float(cpus[0]["Temperature"].replace(',','.').replace('°C','')))
+    dataTemperatura = (horario, float(cpus[0]["Temperature"].replace(',','.').replace('°C','')))
 
-    return dataRam
+    if (ligar_config["temperatura"] == True):
+        return dataTemperatura
+    else:
+        return False
     
-print("Pegando", envRam())
+# print("Pegando", "\nClock: ", envClock(), "\nRAM: ", envRam(), "\nTemperatura: ", envTemperatura())
 
 # print(dados)
 
