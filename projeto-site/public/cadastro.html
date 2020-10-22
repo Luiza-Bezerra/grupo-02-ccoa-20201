@@ -42,33 +42,34 @@
     <!-- DENTRO DA TAG MAIN - COLOCAR O CONTEÚDO DA PÁGINA -->
     <main class="container margin-30-y">
         <form class="box" action="" method="POST" id="form_cadastro" onsubmit="return cadastrar()">
-         <fieldset>
-                <span class="titulo_form">.Cadastro empresa</span>
-                <input class="input b-line-bottom" placeholder="Cnpj" type="text" name="cnpj" id="cnpj" minlength="14" maxlength="14"
-                    required>
-                <input type="text" class="input b-line-bottom" placeholder="Nome da Empresa" name="nomeEmpresa" id="nomeEmp"
-                    minlength="6">
-                <input type="text" class="input b-line-bottom" placeholder="Telefone 1" name="tel1" id="telefone" minlength="8"
-                    maxlength="11" required>
-                <input type="text" class="input b-line-bottom" placeholder="Telefone 2" name="tel2" minlength="8" maxlength="11"
-                    required>
-                    <input type="submit" class="btn" value="Cadastrar">            </fieldset>
-            <fieldset>
-                <span class="titulo_form">.Cadastro Representante</span>
-                <input type="text" class="input b-line-bottom" placeholder="Nome Representante" name="nomeRepre" id="nomeRep"
-                    minlength="5">
-                <input class="input b-line-bottom" placeholder="CPF" name="cpf" id="cpf" minlength="11" maxlength="11">
-                <input type="date" class="input b-line-bottom" placeholder="Data de Nascimento" name="dataNasc" id="dataNasc"
-                    required>
-                <input type="text" class="input b-line-bottom" placeholder="RG" name="rg" id="rg" minlength="9" maxlength="9"
-                    required>
-                <input type="email" class="input b-line-bottom" placeholder="Email" name="email" id="email" required>
-                <input type="password" class="input b-line-bottom" placeholder="Senha" name="senha" id="senhaConf" minlength="5"
-                    required onkeyup="senhaCadastrar()">
-                <input type="password" class="input b-line-bottom" placeholder="Confirmar Senha" id="conf" minlength="5" required
-                    onkeyup="senhaCadastrar()">
-                <div id="div_erros"></div>
-            </fieldset>
+        <fieldset>
+            <span class="titulo_form">.Cadastro empresa</span>
+            <input class="input b-line-bottom" placeholder="Cnpj" type="text" name="cnpj" id="cnpj" minlength="14" maxlength="14"
+                required>
+            <input type="text" class="input b-line-bottom" placeholder="Nome da Empresa" name="nomeEmpresa" id="nomeEmp"
+                minlength="6">
+            <input type="text" class="input b-line-bottom" placeholder="Telefone 1" name="tel1" id="telefone" minlength="8"
+                maxlength="11" required>
+            <input type="text" class="input b-line-bottom" placeholder="Telefone 2" name="tel2" minlength="8" maxlength="11"
+                required>
+            <input type="submit" class="btn" value="Cadastrar">
+        </fieldset>
+        <fieldset>
+            <span class="titulo_form">.Cadastro Representante</span>
+            <input type="text" class="input b-line-bottom" placeholder="Nome Representante" name="nomeRepre" id="nomeRep"
+                minlength="5">
+            <input class="input b-line-bottom" placeholder="CPF" name="cpf" id="cpf" minlength="11" maxlength="11">
+            <input type="date" class="input b-line-bottom" placeholder="Data de Nascimento" name="dataNasc" id="dataNasc"
+                required>
+            <input type="text" class="input b-line-bottom" placeholder="RG" name="rg" id="rg" minlength="9" maxlength="9"
+                required>
+            <input type="email" class="input b-line-bottom" placeholder="Email" name="email" id="email" required>
+            <input type="password" class="input b-line-bottom" placeholder="Senha" name="senha" id="senhaConf" minlength="5"
+                required onkeyup="senhaCadastrar()">
+            <input type="password" class="input b-line-bottom" placeholder="Confirmar Senha" id="conf" minlength="5" required
+                onkeyup="senhaCadastrar()">
+            <div id="div_erros"></div>
+        </fieldset>
         </form>
     </main>
     <footer>
